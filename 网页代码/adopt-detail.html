@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>立即领养</title>
+  <link rel="stylesheet" href="adopt-detail.css">
+</head>
+<body>
+  <header class="detail-header">
+    <div class="pet-list-header">
+      <div class="header-left">
+        <a href="pet-list-new.html" class="back-btn">
+          <img
+            src="../宠物列表image/猫爪返回按钮.png"
+            alt="返回"
+            class="paw-back-icon"
+          />
+        </a>
+      </div>
+    </div>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="../image/热门领养喵喵/喵喵1号.png" alt="喵喵1号" class="carousel-img">
+        </div>
+        <div class="carousel-slide">
+          <img src="../image/热门领养喵喵/喵喵2号.png" alt="喵喵2号" class="carousel-img">
+        </div>
+        <div class="carousel-slide">
+          <img src="../image/热门领养喵喵/喵喵3号.png" alt="喵喵3号" class="carousel-img">
+        </div>
+        <div class="carousel-slide">
+          <img src="../image/热门领养喵喵/喵喵4号.png" alt="喵喵4号" class="carousel-img">
+        </div>
+      </div>
+      <button class="carousel-btn prev-btn">&lt;</button>
+      <button class="carousel-btn next-btn">&gt;</button>
+      <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="detail-content">
+    <h1 class="pet-name">待领养萌宠</h1>
+    <div class="pet-info">
+      <p class="info-item">🐱 健康状况：已驱虫、已疫苗</p>
+      <p class="info-item">📍 所在地区：本地救助站</p>
+      <p class="info-item">📅 年龄：约3-6个月</p>
+      <p class="info-item">💉 绝育情况：已绝育</p>
+    </div>
+  </div>
+
+  <div class="questionnaire-section">
+    <h2 class="section-title">📋 领养申请问卷</h2>
+    
+    <form class="adopt-form">
+      <div class="form-section">
+        <h3 class="form-section-title">一、基本信息</h3>
+        
+        <div class="form-group">
+        <label class="form-label">1. 真实姓名 <span class="required">*</span></label>
+        <input type="text" name="realName" class="form-input" placeholder="请输入您的真实姓名" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">2. 联系电话 <span class="required">*</span></label>
+        <input type="tel" name="phone" class="form-input" placeholder="请输入您的联系电话" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">3. 详细住址 <span class="required">*</span></label>
+        <input type="text" name="address" class="form-input" placeholder="请输入您的详细住址" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">4. 年龄 <span class="required">*</span></label>
+        <input type="number" name="age" class="form-input" placeholder="请输入您的年龄" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">5. 收入情况 <span class="required">*</span></label>
+        <input type="text" name="income" class="form-input" placeholder="请描述您的收入情况" required>
+      </div>
+      </div>
+
+      <div class="form-section">
+        <h3 class="form-section-title">二、养宠经验</h3>
+        
+        <div class="form-group">
+        <label class="form-label">6. 是否有养宠经验？ <span class="required">*</span></label>
+        <div class="radio-group">
+          <label class="radio-item">
+            <input type="radio" name="petExperience" value="有（养过/正在养）" required>
+            <span>有（养过/正在养）</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="petExperience" value="无（第一次养）">
+            <span>无（第一次养）</span>
+          </label>
+        </div>
+        <textarea name="petExperienceDetail" class="form-textarea" placeholder="补充问题：养过什么宠物？养了多久？现在的宠物现状如何？"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">7. 每天能陪伴宠物的时间大概多久？ <span class="required">*</span></label>
+        <div class="radio-group">
+          <label class="radio-item">
+            <input type="radio" name="companyTime" value="1小时以内" required>
+            <span>1小时以内</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="companyTime" value="1-3小时">
+            <span>1-3小时</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="companyTime" value="3-6小时">
+            <span>3-6小时</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="companyTime" value="全天在家">
+            <span>全天在家</span>
+          </label>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">8. 如果后续搬家/换城市/出国，宠物会如何安置？ <span class="required">*</span></label>
+        <textarea name="petRelocation" class="form-textarea" placeholder="请详细描述您的安置计划" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">9. 是否能接受定期回访？ <span class="required">*</span></label>
+        <div class="radio-group">
+          <label class="radio-item">
+            <input type="radio" name="visitAccept" value="接受视频回访" required>
+            <span>接受视频回访</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="visitAccept" value="接受上门回访">
+            <span>接受上门回访</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="visitAccept" value="仅接受偶尔发照片">
+            <span>仅接受偶尔发照片</span>
+          </label>
+        </div>
+      </div>
+      </div>
+
+      <div class="form-section">
+        <h3 class="form-section-title">三、领养动机</h3>
+        
+        <div class="form-group">
+        <label class="form-label">10. 领养原因是什么？ <span class="required">*</span></label>
+        <div class="checkbox-group">
+          <label class="checkbox-item">
+            <input type="checkbox" name="adoptReason" value="单纯喜欢宠物想陪伴">
+            <span>单纯喜欢宠物想陪伴</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="adoptReason" value="给宠物一个稳定的家">
+            <span>给宠物一个稳定的家</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="adoptReason" value="家里有孩子想养宠物培养责任感">
+            <span>家里有孩子想养宠物培养责任感</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="adoptReason" value="跟风一时兴起">
+            <span>跟风一时兴起</span>
+          </label>
+          <label class="checkbox-item">
+            <input type="checkbox" name="adoptReason" value="其他">
+            <span>其他</span>
+          </label>
+        </div>
+        <textarea name="adoptReasonDetail" class="form-textarea" placeholder="补充：为什么选择领养而不是购买？"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">11. 是否能接受宠物可能会生病、掉毛、拆家、乱尿等问题？ <span class="required">*</span></label>
+        <textarea name="acceptPetProblems" class="form-textarea" placeholder="请详细说明您的态度和应对方案" required></textarea>
+      </div>
+      </div>
+
+      <div class="form-section">
+        <h3 class="form-section-title">四、健康与医疗</h3>
+        
+        <div class="form-group">
+        <label class="form-label">12. 是否有了解过宠物绝育、疫苗、驱虫的相关知识？ <span class="required">*</span></label>
+        <textarea name="petHealthKnowledge" class="form-textarea" placeholder="后续是否会按时带宠物做绝育、打疫苗？" required></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">13. 宠物生病时，是否愿意承担医疗费用？ <span class="required">*</span></label>
+        <div class="radio-group">
+          <label class="radio-item">
+            <input type="radio" name="medicalCost" value="愿意承担基础医疗" required>
+            <span>愿意承担基础医疗</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="medicalCost" value="愿意承担大病医疗">
+            <span>愿意承担大病医疗</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="medicalCost" value="不确定">
+            <span>不确定</span>
+          </label>
+        </div>
+      </div>
+      </div>
+
+      <div class="form-section agreement-section">
+        <h3 class="form-section-title">五、领养协议</h3>
+        
+        <div class="agreement-content" id="agreementContent" tabindex="0" role="region" aria-label="领养协议内容区域">
+          <h4>协议核心条款</h4>
+          <p>不得转卖/转送、不得弃养、接受回访、按时绝育疫苗、不得虐待等领养方承诺条款（核心义务）</p>
+          
+          <h4>一、饲养与居住保障</h4>
+          <ol>
+            <li>领养方承诺为宠物提供安全、舒适、卫生的居住环境，不得长期笼养、拴养、虐待或弃养，不得让宠物处于饥饿、寒冷、暴晒、潮湿等恶劣环境中。</li>
+            <li>领养方需科学喂养，为宠物提供符合其生长需求的优质主粮、洁净饮水，不投喂有毒、有害或不适宜宠物食用的食物。</li>
+            <li>领养方需做好家中安全防护，如封窗、阳台防护、收纳有毒物品/电线等，避免宠物发生坠楼、误食、触电等意外事故。</li>
+            <li>领养方不得将宠物用于商业用途（如繁殖、售卖、租借、表演等），不得转赠、转卖、遗弃或交由他人代为饲养（特殊情况需提前联系送养方协商）。</li>
+          </ol>
+          
+          <h4>二、医疗与健康责任</h4>
+          <ol>
+            <li>领养方承诺按时为宠物完成后续疫苗接种、体内外驱虫，在宠物达到适宜年龄后，必须带其完成绝育手术，并将相关凭证反馈给送养方备案。</li>
+            <li>宠物出现生病、受伤、发情等情况时，领养方需及时带其前往正规宠物医院就诊，承担全部医疗费用，不得拖延或放弃治疗。</li>
+            <li>领养方不得给宠物使用未经兽医认可的偏方、药物，避免造成宠物二次伤害。</li>
+          </ol>
+          
+          <h4>三、回访与沟通义务</h4>
+          <ol>
+            <li>领养方同意送养方通过线上视频回访、照片反馈回访、线下上门回访（提前预约）的方式，了解宠物的生活状况，不得以任何理由拒绝或拖延回访。</li>
+            <li>领养方需定期（至少每季度一次）主动向送养方反馈宠物的近况，包括照片、视频或文字说明。</li>
+            <li>领养方的联系方式、居住地址发生变更时，需在7日内主动告知送养方，避免失去联系。</li>
+          </ol>
+          
+          <h4>四、特殊情况处理约定</h4>
+          <ol>
+            <li>若领养方后续因搬家、换城市、出国、工作变动、家庭变故等原因，无法继续饲养宠物时，必须第一时间联系送养方协商处理，不得私自将宠物转送他人或遗弃。</li>
+            <li>领养方承诺，宠物若发生意外、重病或其他特殊情况，需及时告知送养方，双方共同协商处理方案，不得擅自做出放弃治疗、安乐死等重大决定。</li>
+          </ol>
+          
+          <h4>三、送养方权利与义务</h4>
+          <ol>
+            <li>送养方需向领养方如实告知宠物的健康状况、性格特点、既往病史等信息，不得隐瞒重大疾病或行为问题。</li>
+            <li>送养方有权对领养方的饲养环境、宠物生活状况进行回访，发现领养方违反协议约定时，有权要求领养方整改；若领养方拒不整改或出现弃养、虐待等严重行为，送养方有权无条件收回宠物，且不退还领养保证金（如有）。</li>
+            <li>送养方需为领养方提供基础的饲养指导、医疗建议，协助领养方快速适应养宠生活。</li>
+          </ol>
+          
+          <h4>四、违约责任</h4>
+          <ol>
+            <li>若领养方违反本协议第二条任何条款，送养方有权单方面解除协议，无条件收回宠物，且领养方已缴纳的领养保证金、相关费用不予退还。</li>
+            <li>若领养方出现虐待、遗弃、转卖宠物等严重违约行为，送养方有权向领养方追偿相关损失，并保留通过法律途径追究其责任的权利。</li>
+            <li>若因领养方未履行饲养、医疗义务，导致宠物出现严重伤病或死亡，领养方需承担全部责任，送养方有权收回宠物（或遗体），并要求领养方承担相应的赔偿责任。</li>
+          </ol>
+          
+          <h4>五、其他约定</h4>
+          <ol>
+            <li>本协议自双方签字（或线上确认）之日起生效，长期有效，直至宠物自然死亡或送养方收回宠物为止。</li>
+            <li>本协议未尽事宜，双方可另行协商补充，补充协议与本协议具有同等法律效力。</li>
+            <li>本协议一式两份，送养方与领养方各执一份，线上签署的电子协议与纸质协议具有同等法律效力。</li>
+          </ol>
+        </div>
+        
+        <div class="scroll-hint" id="scrollHint">
+          <span>⬇️ 请滚动浏览协议至底部</span>
+        </div>
+        
+        <div class="form-group agreement-form-group" id="agreementFormGroup">
+          <label class="form-label">14. 是否签署领养协议？ <span class="required">*</span></label>
+          <label class="checkbox-item agreement-checkbox" id="agreementCheckbox">
+            <input type="checkbox" id="agreementCheck" required>
+            <span id="agreementSpan">我已仔细阅读并完全理解本协议的所有条款，自愿签署本协议，并承诺严格遵守以上约定，科学饲养、爱护被领养宠物，承担作为领养人的全部责任。</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-section signature-section">
+        <h3 class="form-section-title">签署确认</h3>
+        
+        <div class="signature-row">
+          <div class="signature-item">
+            <label>领养方（签字/线上确认）：</label>
+            <input type="text" name="adopterSignature" class="signature-input" placeholder="请签名">
+          </div>
+          <div class="signature-item">
+            <label>联系电话：</label>
+            <input type="tel" name="adopterPhone" class="signature-input" placeholder="联系电话">
+          </div>
+          <div class="signature-item">
+            <label>签署日期：</label>
+            <input type="date" name="adopterDate" class="signature-input">
+          </div>
+        </div>
+        
+        <div class="signature-row">
+          <div class="signature-item">
+            <label>送养方（签字/盖章/线上确认）：</label>
+            <input type="text" name="shelterSignature" class="signature-input" placeholder="送养方签名">
+          </div>
+          <div class="signature-item">
+            <label>联系电话：</label>
+            <input type="tel" name="shelterPhone" class="signature-input" placeholder="送养方电话">
+          </div>
+          <div class="signature-item">
+            <label>签署日期：</label>
+            <input type="date" name="shelterDate" class="signature-input">
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="submit-btn">提交领养申请</button>
+        <button type="reset" class="reset-btn">重置表单</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- 提交确认模态弹窗 -->
+  <div class="modal-overlay" id="submitModal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>确认提交</h3>
+      </div>
+      <div class="modal-body">
+        <p>您确定要提交这份领养申请吗？</p>
+        <p>提交后我们将尽快审核您的申请。</p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn confirm-btn" id="confirmSubmitBtn">确认提交</button>
+        <button class="modal-btn cancel-btn" id="cancelSubmitBtn">修改</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 提交成功提示 -->
+  <div class="success-toast" id="successToast" style="display: none;">
+    <div class="success-icon">✓</div>
+    <div class="success-text">提交成功</div>
+  </div>
+
+  <!-- 重复申请提示弹窗 -->
+  <div class="duplicate-modal-overlay" id="duplicateModal" style="display: none;">
+    <div class="duplicate-modal-content">
+      <div class="duplicate-icon">⚠️</div>
+      <div class="duplicate-text">你已提交领养申请</div>
+    </div>
+  </div>
+
+  <script src="guest-auth.js"></script>
+  <script>
+    // 全局错误处理
+    window.addEventListener('error', function(event) {
+      console.error('全局错误:', event.error);
+      console.error('错误详情:', {
+        message: event.message,
+        filename: event.filename,
+        lineno: event.lineno,
+        colno: event.colno
+      });
+    });
+    
+    window.addEventListener('unhandledrejection', function(event) {
+      console.error('未处理的Promise拒绝:', event.reason);
+    });
+    
+    // 防止重复初始化的标志
+    let initialized = false;
+    
+    // API配置
+    const API_BASE_URL = 'http://localhost:3000/api';
+    
+    // 从URL获取宠物ID
+    function getPetIdFromUrl() {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get('petId') || 'pet_001';
+    }
+    
+    // 当前宠物ID
+    const CURRENT_PET_ID = getPetIdFromUrl();
+    
+    let currentSlide = 0;
+    let slides, dots, totalSlides;
+    
+    // 安全初始化轮播图
+    function initCarousel() {
+      slides = document.querySelectorAll('.carousel-slide');
+      dots = document.querySelectorAll('.dot');
+      totalSlides = slides.length;
+      
+      if (totalSlides === 0) {
+        console.log('没有找到轮播图，跳过初始化');
+        return;
+      }
+      
+      console.log('轮播图初始化，slide数量:', totalSlides);
+      
+      function showSlide(index) {
+        if (index >= totalSlides) currentSlide = 0;
+        if (index < 0) currentSlide = totalSlides - 1;
+        
+        const track = document.querySelector('.carousel-track');
+        if (track) {
+          track.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+        
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentSlide);
+        });
+      }
+      
+      const nextBtn = document.querySelector('.next-btn');
+      if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+          currentSlide++;
+          showSlide(currentSlide);
+        });
+      }
+      
+      const prevBtn = document.querySelector('.prev-btn');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+          currentSlide--;
+          showSlide(currentSlide);
+        });
+      }
+      
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          currentSlide = i;
+          showSlide(currentSlide);
+        });
+      });
+      
+      // 自动轮播
+      if (totalSlides > 1) {
+        setInterval(() => {
+          currentSlide++;
+          showSlide(currentSlide);
+        }, 3000);
+      }
+    }
+    
+    // 游客模式检查函数
+    function checkGuestMode(e) {
+      if (localStorage.getItem('userRole') === 'guest') {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof showGuestModal === 'function') {
+          showGuestModal();
+        } else {
+          alert('当前为游客模式，请先注册登录');
+        }
+        return true;
+      }
+      return false;
+    }
+    
+
+
+    // 领养协议滚动监听功能
+    function initAgreementScroll() {
+      const agreementContent = document.getElementById('agreementContent');
+      const scrollHint = document.getElementById('scrollHint');
+      const agreementFormGroup = document.getElementById('agreementFormGroup');
+      const agreementCheck = document.getElementById('agreementCheck');
+      
+      if (!agreementContent || !scrollHint || !agreementFormGroup || !agreementCheck) {
+        console.error('领养协议元素未找到');
+        return;
+      }
+
+      console.log('领养协议功能初始化成功');
+
+      function isScrolledToBottom() {
+        const scrollTop = agreementContent.scrollTop;
+        const scrollHeight = agreementContent.scrollHeight;
+        const clientHeight = agreementContent.clientHeight;
+        const threshold = 10;
+        const result = scrollTop + clientHeight >= scrollHeight - threshold;
+        console.log('滚动检测:', { scrollTop, scrollHeight, clientHeight, result });
+        return result;
+      }
+
+      function enableAgreementCheck() {
+        console.log('启用协议勾选');
+        scrollHint.classList.add('hidden');
+        agreementFormGroup.classList.remove('disabled');
+        agreementFormGroup.classList.add('enabled');
+        agreementFormGroup.setAttribute('aria-disabled', 'false');
+        agreementCheck.disabled = false;
+        agreementCheck.setAttribute('aria-disabled', 'false');
+        
+        // 添加成功反馈
+        agreementFormGroup.style.transform = 'scale(1.02)';
+        setTimeout(() => {
+          agreementFormGroup.style.transform = 'scale(1)';
+        }, 200);
+      }
+
+      function disableAgreementCheck() {
+        console.log('禁用协议勾选');
+        scrollHint.classList.remove('hidden');
+        agreementFormGroup.classList.add('disabled');
+        agreementFormGroup.classList.remove('enabled');
+        agreementFormGroup.setAttribute('aria-disabled', 'true');
+        agreementCheck.disabled = true;
+        agreementCheck.setAttribute('aria-disabled', 'true');
+      }
+
+      // 确保初始状态是禁用的
+      disableAgreementCheck();
+
+      let scrollTimeout;
+      agreementContent.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+          if (isScrolledToBottom()) {
+            enableAgreementCheck();
+            // 保存阅读状态到 localStorage
+            localStorage.setItem('agreementRead', 'true');
+          }
+        }, 50);
+      });
+
+      // 键盘支持 - 当用户用键盘滚动到末端时也启用
+      agreementContent.addEventListener('keydown', function(e) {
+        if (e.key === 'End' || e.key === 'PageDown') {
+          setTimeout(function() {
+            if (isScrolledToBottom()) {
+              enableAgreementCheck();
+              localStorage.setItem('agreementRead', 'true');
+            }
+          }, 100);
+        }
+      });
+
+      // 页面加载时不检查localStorage，确保每次都需要重新滚动
+      console.log('协议滚动功能就绪');
+    }
+
+    // 重复申请检查功能
+    const SUBMITTED_PETS_KEY = 'submittedPets';
+    
+    // 获取认证token
+    function getAuthToken() {
+      return localStorage.getItem('token');
+    }
+    
+    // 检查是否已提交申请 - 调用后端API
+    async function hasSubmittedApplication() {
+      const token = getAuthToken();
+      if (!token) {
+        // 如果没有token，使用本地存储作为备选
+        const submittedPets = JSON.parse(localStorage.getItem(SUBMITTED_PETS_KEY) || '[]');
+        return submittedPets.includes(CURRENT_PET_ID);
+      }
+      
+      try {
+        const response = await fetch(`${API_BASE_URL}/adoption/check/${CURRENT_PET_ID}`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+        
+        const result = await response.json();
+        return result.data && result.data.hasApplied;
+      } catch (error) {
+        console.error('检查申请状态失败:', error);
+        // 如果API调用失败，使用本地存储作为备选
+        const submittedPets = JSON.parse(localStorage.getItem(SUBMITTED_PETS_KEY) || '[]');
+        return submittedPets.includes(CURRENT_PET_ID);
+      }
+    }
+    
+    // 保存已提交的申请 - 本地存储作为备选
+    function saveSubmittedApplication() {
+      const submittedPets = JSON.parse(localStorage.getItem(SUBMITTED_PETS_KEY) || '[]');
+      if (!submittedPets.includes(CURRENT_PET_ID)) {
+        submittedPets.push(CURRENT_PET_ID);
+        localStorage.setItem(SUBMITTED_PETS_KEY, JSON.stringify(submittedPets));
+      }
+    }
+    
+    // 收集表单数据
+    function collectFormData() {
+      const form = document.querySelector('.adopt-form');
+      const formData = {};
+      
+      // 收集文本输入
+      const inputs = form.querySelectorAll('input[type="text"], input[type="tel"], input[type="number"], input[type="date"]');
+      inputs.forEach(input => {
+        if (input.name) {
+          formData[input.name] = input.value;
+        }
+      });
+      
+      // 收集单选按钮
+      const radios = form.querySelectorAll('input[type="radio"]:checked');
+      radios.forEach(radio => {
+        formData[radio.name] = radio.value;
+      });
+      
+      // 收集复选框
+      const checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
+      checkboxes.forEach(checkbox => {
+        if (checkbox.name) {
+          if (!formData[checkbox.name]) {
+            formData[checkbox.name] = [];
+          }
+          formData[checkbox.name].push(checkbox.value);
+        }
+      });
+      
+      // 收集文本域
+      const textareas = form.querySelectorAll('textarea');
+      textareas.forEach(textarea => {
+        if (textarea.name) {
+          formData[textarea.name] = textarea.value;
+        }
+      });
+      
+      return formData;
+    }
+    
+    // 显示重复申请提示
+    function showDuplicateModal() {
+      console.log('显示重复申请提示');
+      const modal = document.getElementById('duplicateModal');
+      if (modal) {
+        modal.style.display = 'flex';
+        
+        // 1秒后自动关闭并返回上一页
+        setTimeout(() => {
+          modal.style.display = 'none';
+          console.log('自动返回上一页');
+          if (window.history.length > 1) {
+            window.history.back();
+          } else {
+            // 如果没有历史记录，跳转到宠物列表页
+            window.location.href = 'pet-list-new.html';
+          }
+        }, 1000);
+      }
+    }
+
+    // 表单数据暂存功能
+    const FORM_DATA_KEY = 'adoptFormData';
+
+    function saveFormData() {
+      const form = document.querySelector('.adopt-form');
+      const formData = {};
+      
+      // 保存文本输入
+      const inputs = form.querySelectorAll('input[type="text"], input[type="tel"], input[type="number"], input[type="date"]');
+      inputs.forEach(input => {
+        if (input.name) {
+          formData[input.name] = input.value;
+        }
+      });
+      
+      // 保存单选按钮
+      const radios = form.querySelectorAll('input[type="radio"]:checked');
+      radios.forEach(radio => {
+        formData[radio.name] = radio.value;
+      });
+      
+      // 保存复选框
+      const checkboxes = form.querySelectorAll('input[type="checkbox"]:checked');
+      checkboxes.forEach(checkbox => {
+        if (checkbox.name) {
+          if (!formData[checkbox.name]) {
+            formData[checkbox.name] = [];
+          }
+          formData[checkbox.name].push(checkbox.value);
+        }
+      });
+      
+      // 保存文本域
+      const textareas = form.querySelectorAll('textarea');
+      textareas.forEach(textarea => {
+        if (textarea.name) {
+          formData[textarea.name] = textarea.value;
+        }
+      });
+      
+      localStorage.setItem(FORM_DATA_KEY, JSON.stringify(formData));
+      console.log('表单数据已保存');
+    }
+
+    function loadFormData() {
+      const savedData = localStorage.getItem(FORM_DATA_KEY);
+      if (!savedData) return;
+      
+      const formData = JSON.parse(savedData);
+      const form = document.querySelector('.adopt-form');
+      
+      // 恢复文本输入
+      const inputs = form.querySelectorAll('input[type="text"], input[type="tel"], input[type="number"], input[type="date"]');
+      inputs.forEach(input => {
+        if (input.name && formData[input.name]) {
+          input.value = formData[input.name];
+        }
+      });
+      
+      // 恢复单选按钮
+      const radios = form.querySelectorAll('input[type="radio"]');
+      radios.forEach(radio => {
+        if (formData[radio.name] === radio.value) {
+          radio.checked = true;
+        }
+      });
+      
+      // 恢复复选框
+      const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(checkbox => {
+        if (checkbox.name && formData[checkbox.name] && formData[checkbox.name].includes(checkbox.value)) {
+          checkbox.checked = true;
+        }
+      });
+      
+      // 恢复文本域
+      const textareas = form.querySelectorAll('textarea');
+      textareas.forEach(textarea => {
+        if (textarea.name && formData[textarea.name]) {
+          textarea.value = formData[textarea.name];
+        }
+      });
+      
+      console.log('表单数据已恢复');
+    }
+
+    // 实时保存表单数据
+    function setupAutoSave() {
+      const form = document.querySelector('.adopt-form');
+      form.addEventListener('input', saveFormData);
+      form.addEventListener('change', saveFormData);
+    }
+
+    // 表单验证功能 - 简化版本
+    function validateForm() {
+      console.log('开始表单验证...');
+      const form = document.querySelector('.adopt-form');
+      if (!form) {
+        console.error('找不到表单！');
+        return false;
+      }
+      
+      const requiredInputs = form.querySelectorAll('[required]');
+      console.log('找到必填项数量:', requiredInputs.length);
+      
+      let isValid = true;
+      
+      requiredInputs.forEach(input => {
+        let hasValue = false;
+        
+        if (input.type === 'checkbox') {
+          hasValue = input.checked;
+        } else {
+          hasValue = input.value && input.value.trim() !== '';
+        }
+        
+        if (!hasValue) {
+          isValid = false;
+          input.style.borderColor = '#ff6b6b';
+          console.log('未填写的字段:', input.placeholder || input.name);
+        } else {
+          input.style.borderColor = '';
+        }
+      });
+      
+      console.log('表单验证结果:', isValid);
+      return isValid;
+    }
+
+    // 模态弹窗控制
+    function showModal() {
+      console.log('showModal 被调用');
+      const modal = document.getElementById('submitModal');
+      console.log('找到的弹窗元素:', modal);
+      if (modal) {
+        modal.style.display = 'flex';
+        console.log('弹窗已设置为 display: flex');
+      } else {
+        console.error('找不到弹窗元素！');
+      }
+    }
+
+    function hideModal() {
+      console.log('hideModal 被调用');
+      const modal = document.getElementById('submitModal');
+      console.log('找到的弹窗元素:', modal);
+      if (modal) {
+        modal.style.display = 'none';
+        console.log('弹窗已隐藏');
+      } else {
+        console.error('找不到弹窗元素！');
+      }
+    }
+
+    // 显示成功提示
+    function showSuccessToast() {
+      const toast = document.getElementById('successToast');
+      toast.style.display = 'block';
+      
+      setTimeout(() => {
+        toast.style.display = 'none';
+        // 跳转到宠物列表页面
+        window.location.href = 'pet-list-new.html';
+      }, 1000);
+    }
+
+    // 提交表单到服务器
+    async function submitForm() {
+      const confirmBtn = document.getElementById('confirmSubmitBtn');
+      const originalText = confirmBtn ? confirmBtn.textContent : '';
+      
+      try {
+        console.log('开始提交申请...');
+        
+        // 显示加载状态
+        if (confirmBtn) {
+          confirmBtn.textContent = '提交中...';
+          confirmBtn.disabled = true;
+        }
+        
+        const form = document.querySelector('.adopt-form');
+        if (!form) {
+          throw new Error('找不到表单');
+        }
+        
+        const applicationData = collectFormData();
+        const token = getAuthToken();
+        
+        // 准备提交数据
+        const submitData = {
+          petId: CURRENT_PET_ID,
+          applicationData: applicationData
+        };
+        
+        console.log('提交数据:', submitData);
+        
+        if (token) {
+          // 有token，调用后端API
+          const response = await fetch(`${API_BASE_URL}/adoption/submit`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': `Bearer ${token}`
+            },
+            body: JSON.stringify(submitData)
+          });
+          
+          const result = await response.json();
+          console.log('API响应:', result);
+          
+          if (response.status === 409) {
+            // 重复申请
+            hideModal();
+            showDuplicateModal();
+            return;
+          }
+          
+          if (!response.ok) {
+            throw new Error(result.msg || '提交失败');
+          }
+          
+          console.log('申请提交成功，申请ID:', result.data.applicationId);
+        } else {
+          // 没有token，使用本地模拟
+          console.log('未登录，使用本地模拟');
+          await new Promise(resolve => setTimeout(resolve, 500));
+        }
+        
+        // 保存已提交的申请状态（本地存储作为备份）
+        saveSubmittedApplication();
+        console.log('申请状态已保存');
+        
+        // 清除保存的表单数据
+        localStorage.removeItem(FORM_DATA_KEY);
+        
+        // 显示成功提示
+        hideModal();
+        showSuccessToast();
+        
+      } catch (error) {
+        console.error('提交失败:', error);
+        alert(error.message || '提交失败，请稍后重试');
+      } finally {
+        // 恢复按钮状态
+        if (confirmBtn) {
+          confirmBtn.textContent = originalText || '确认提交';
+          confirmBtn.disabled = false;
+        }
+      }
+    }
+
+    // 初始化提交流程
+    function initSubmitProcess() {
+      console.log('开始初始化提交流程...');
+      
+      const submitBtn = document.querySelector('.submit-btn');
+      const confirmBtn = document.getElementById('confirmSubmitBtn');
+      const cancelBtn = document.getElementById('cancelSubmitBtn');
+      
+      console.log('找到的元素:', { submitBtn, confirmBtn, cancelBtn });
+      
+      if (!submitBtn) {
+        console.error('找不到提交按钮！');
+        return;
+      }
+      
+      if (!confirmBtn || !cancelBtn) {
+        console.error('找不到弹窗按钮！');
+      }
+      
+      // 点击提交按钮显示确认弹窗
+      submitBtn.addEventListener('click', async (e) => {
+        console.log('=== 提交按钮被点击 ===');
+        e.preventDefault();
+        e.stopPropagation();
+        
+        // 检查游客模式
+        if (checkGuestMode(e)) {
+          return;
+        }
+        
+        // 检查是否已提交申请
+        try {
+          const hasSubmitted = await hasSubmittedApplication();
+          if (hasSubmitted) {
+            console.log('检测到重复申请');
+            showDuplicateModal();
+            return;
+          }
+        } catch (error) {
+          console.error('检查申请状态失败:', error);
+        }
+        
+        // 先验证表单
+        if (!validateForm()) {
+          alert('请填写完整的必填项');
+          return;
+        }
+        
+        // 保存当前表单数据
+        saveFormData();
+        
+        // 显示确认弹窗
+        console.log('准备显示弹窗...');
+        showModal();
+        console.log('弹窗显示函数已调用');
+      });
+      
+      // 确认提交
+      if (confirmBtn) {
+        confirmBtn.addEventListener('click', (e) => {
+          console.log('=== 确认提交按钮被点击 ===');
+          e.preventDefault();
+          e.stopPropagation();
+          submitForm();
+        });
+      }
+      
+      // 取消提交，关闭弹窗，保留表单内容
+      if (cancelBtn) {
+        cancelBtn.addEventListener('click', (e) => {
+          console.log('=== 修改按钮被点击 ===');
+          e.preventDefault();
+          e.stopPropagation();
+          hideModal();
+          console.log('弹窗已关闭，用户可以继续编辑表单');
+        });
+      }
+      
+      // 点击遮罩层关闭弹窗
+      const modalOverlay = document.getElementById('submitModal');
+      if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+          console.log('点击了遮罩层:', e.target.id);
+          if (e.target.id === 'submitModal') {
+            hideModal();
+          }
+        });
+      }
+      
+      // 页面加载时恢复表单数据
+      loadFormData();
+      
+      // 设置自动保存
+      setupAutoSave();
+      
+      console.log('提交流程初始化完成');
+    }
+
+    // 页面加载完成后初始化
+    console.log('文档状态:', document.readyState);
+    
+    async function initAll() {
+      // 防止重复初始化
+      if (initialized) {
+        console.log('已经初始化过，跳过initAll');
+        return;
+      }
+      
+      console.log('开始初始化所有功能...');
+      console.log('当前宠物ID:', CURRENT_PET_ID);
+      
+      // 先设置初始化标志，防止重复初始化
+      initialized = true;
+      
+      try {
+        // 初始化轮播图
+        initCarousel();
+        
+        // 初始化协议滚动
+        initAgreementScroll();
+        
+        // 初始化提交流程
+        initSubmitProcess();
+        
+        // 页面加载时检查是否已提交申请
+        const hasSubmitted = await hasSubmittedApplication();
+        if (hasSubmitted) {
+          console.log('页面加载时检测到已提交申请');
+          // 延迟一小会儿显示，确保页面完全加载
+          setTimeout(() => {
+            showDuplicateModal();
+          }, 500);
+        }
+        
+        console.log('所有功能初始化完成');
+      } catch (error) {
+        console.error('初始化过程出错:', error);
+      }
+    }
+    
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log('DOMContentLoaded 触发');
+        initAll();
+      });
+    } else {
+      console.log('DOM已加载，直接初始化');
+      initAll();
+    }
+    
+    // 备用初始化方式 - 但检查是否已初始化
+    window.onload = function() {
+      console.log('window.onload 触发');
+      if (!initialized) {
+        initAll();
+      }
+    };
+    
+    // 延迟初始化作为最后的保障 - 同样检查是否已初始化
+    setTimeout(() => {
+      console.log('延迟初始化触发');
+      if (!initialized) {
+        initAll();
+      }
+    }, 1000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>爱心捐赠</title>
+    <link rel="stylesheet" href="donate.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- 头部区域 -->
+      <header class="donate-header">
+        <div class="header-content">
+          <a href="index.html" class="back-btn">
+            <img
+              src="../爱心捐赠image/返回按钮.png"
+              alt="返回"
+              class="paw-back-icon"
+            />
+          </a>
+          <img
+            src="../爱心捐赠image/标题.png"
+            alt="标题"
+            class="donate-title"
+          />
+          <img
+            src="../爱心捐赠image/爱心捐赠图标.jpg"
+            alt="爱心图标"
+            class="donate-icon"
+          />
+        </div>
+      </header>
+
+      <!-- 捐款项目盒子 -->
+      <div class="project-box">
+        <!-- 小橘猫救助信息 -->
+        <div class="cat-container-1">
+          <div class="cat-left-1">
+            <img
+              src="../爱心捐赠image/卡通小橘猫2.png"
+              alt="卡通小橘猫"
+              class="cat-img"
+            />
+          </div>
+          <div class="cat-content-1">
+            <div class="cat-text">
+              <p>骨折流浪橘猫“小橙”紧急救治</p>
+              <p>目标金额：¥3000</p>
+              <p>已筹金额：¥600</p>
+            </div>
+            <div class="btn-container-1">
+              <img
+                src="../爱心捐赠image/确认捐款按钮.png"
+                alt="确认捐款"
+                class="donate-btn-img"
+                id="orange-cat-donate-btn"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- 小白猫救助信息 -->
+        <div class="cat-container-2">
+          <div class="cat-left-2">
+            <img
+              src="../爱心捐赠image/卡通小白猫.jpg"
+              alt="卡通小白猫"
+              class="white-cat-img"
+            />
+          </div>
+          <div class="cat-content-2">
+            <div class="plan-text">
+              <p>流浪动物过冬暖冬计划</p>
+              <p>目标金额:¥6000</p>
+              <p>已筹金额:¥1200</p>
+            </div>
+            <div class="btn-container-2">
+              <img
+                src="../爱心捐赠image/确认捐款按钮.png"
+                alt="确认捐款"
+                class="donate-btn-img-second"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 中间部分 -->
+      <div class="middle-content">
+        <!-- 毛孩子合照 -->
+        <div class="photo-with-text">
+          <img
+            src="../爱心捐赠image/毛孩子合照.png"
+            alt="毛孩子合照"
+            class="group-photo-img"
+          />
+        </div>
+        <p class="photo-caption">每一分钱都用在实处</p>
+        <!-- 善款去向 -->
+        <div class="fund-record-container">
+          <div class="first">
+            <img
+              src="../爱心捐赠image/善款去向毛孩子.png"
+              alt="善款去向毛孩子"
+              class="transparency-kids-overlay"
+            />
+          </div>
+          <div class="sceond">
+            <div class="sceond-left">
+              <img
+                src="../爱心捐赠image/卡通小白猫2.png"
+                alt="卡通小白猫"
+                class="white-cat-layer"
+              />
+            </div>
+
+            <div class="sceond-right">
+              <div class="fund-record-text">
+                <p>为十二只猫咪采购冬季猫粮</p>
+                <p>用途:为基地12只流浪猫采购冬季猫粮</p>
+                <p>保障过冬口粮</p>
+                <p>支出金额:¥1200</p>
+              </div>
+              <img
+                src="../爱心捐赠image/查看流水.png"
+                alt="查看流水"
+                class="flow-record-img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 捐款金额选择区域 -->
+      <div class="donate-amount-container">
+        <div class="neirong">
+          <div class="amount-box">
+            <div class="amount-5">5元</div>
+            <div class="amount-10">10元</div>
+            <div class="amount-15">15元</div>
+            <div class="amount-50">50元</div>
+          </div>
+          <div class="serch">
+            <div class="custom-amount-input"></div>
+          </div>
+          <div class="queren">
+            <div class="confirm-donate-btn"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 橘猫捐款弹窗 -->
+    <div class="donate-modal-overlay" id="donateModal">
+      <div class="donate-modal">
+        <button class="donate-modal-close-btn" id="donateModalCloseBtn">
+          ×
+        </button>
+        <div class="donate-modal-content">
+          <img
+            src="../小橘募捐界面/背景.png"
+            alt="捐款弹窗背景"
+            class="donate-modal-bg"
+          />
+          <div class="donate-modal-title">骨折流浪橘猫"小橙"紧急救治详情</div>
+          <img
+            src="../爱心捐赠image/卡通小橘猫2.png"
+            alt="卡通小橘猫"
+            class="donate-modal-cat"
+          />
+          <div class="donate-modal-info">
+            <p>姓名:小橙 性别:女</p>
+            <p>年龄:约8个月</p>
+            <p>诊断:右前肢开放性骨折，伴有软组织挫伤</p>
+          </div>
+          <div class="donate-modal-amount">
+            <p>已筹备金额:¥2350 需筹备金额:¥5000</p>
+            <div class="progress-bar-container">
+              <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progressBarFill"></div>
+              </div>
+              <span class="progress-percent" id="progressPercent">0%</span>
+            </div>
+            <div class="donate-modal-donor">
+              捐赠人:爱心网友123，金额:¥50 时间:10:30
+            </div>
+            <div class="donate-modal-donor">
+              捐赠人:喵星人保护协会，金额:¥200 时间:10:25
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="guest-auth.js"></script>
+    <script>
+      // 获取按钮和弹窗元素
+      const donateBtn = document.getElementById("orange-cat-donate-btn");
+      const modal = document.getElementById("donateModal");
+      const closeBtn = document.getElementById("donateModalCloseBtn");
+
+      // 计算进度条
+      function updateProgress() {
+        const currentAmount = 2350;
+        const targetAmount = 5000;
+        const percent = Math.min((currentAmount / targetAmount) * 100, 100);
+        const progressBar = document.getElementById("progressBarFill");
+        const percentText = document.getElementById("progressPercent");
+        if (progressBar && percentText) {
+          progressBar.style.width = percent + "%";
+          percentText.textContent = Math.round(percent) + "%";
+        }
+      }
+
+      // 点击按钮打开弹窗
+      donateBtn.addEventListener("click", () => {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+        updateProgress();
+      });
+
+      // 点击关闭按钮关闭弹窗
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+      });
+
+      // 点击遮罩层关闭弹窗
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      // 点击查看流水图片跳转到善款流水明细页面
+      const flowRecordImg = document.querySelector(".flow-record-img");
+      if (flowRecordImg) {
+        flowRecordImg.addEventListener("click", () => {
+          window.location.href = "fund-details.html";
+        });
+        flowRecordImg.style.cursor = "pointer";
+      }
+    </script>
+  </body>
+</html>

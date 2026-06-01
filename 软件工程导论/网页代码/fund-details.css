@@ -1,0 +1,485 @@
+/* 全局重置与基础设置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 页面容器 */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  background-image: url("../善款流水明细image/纯色背景.jpg");
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100vw;
+  height: calc(100vw / (2279 / 1280));
+  max-height: 100vh;
+  max-width: calc(100vh * (2279 / 1280));
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 头部区域 */
+.header-area {
+  display: flex;
+  width: 100%;
+  height: 12%;
+}
+
+.header-bg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url("../善款流水明细image/header背景.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-top: 30px;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+.back-icon {
+  width: 11%;
+  object-fit: contain;
+  margin-top: 1%;
+  margin-left: 3%;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  flex: 1;
+}
+.main {
+  position: absolute;
+  display: flex;
+  top: 9%;
+  width: 100%;
+  height: 91%;
+  background-image: url(../善款流水明细image/大猫猫框.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+}
+.main-frame {
+  background-size: 100% 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  width: 84%;
+  height: 80%;
+  margin: 0% 1% 0% 0%;
+  gap: 0%;
+}
+.money {
+  display: flex;
+  margin: 10% 0% 0% 0%;
+  width: 100%;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+}
+.kuang {
+  display: flex;
+  gap: 1%;
+  width: 100%;
+  height: 45%;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 35%;
+  padding: 0% 5% 3% 0%;
+}
+.frame-pink {
+  display: flex;
+  background-image: url(../善款流水明细image/粉框.png);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 0%;
+  /* position:absolute; */
+  left: 0%;
+}
+
+.frame-green {
+  display: flex;
+  background-image: url(../善款流水明细image/绿框.png);
+  background-size: 99.5% 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 0%;
+  /* position: absolute; */
+  z-index: 5;
+  left: 0%;
+}
+
+.page-title-text {
+  position: absolute;
+  display: flex;
+  top: 1%;
+  left: 39%;
+  font-size: 3vw;
+  font-family:
+    "Sarasa Gothic", "思源柔黑体", "PingFang SC", "微软雅黑", sans-serif;
+  font-weight: bold;
+  color: white;
+  -webkit-text-stroke: 0px #000;
+  text-shadow:
+    -3px -3px 0 black,
+    3px -3px 0 black,
+    -3px 3px 0 black,
+    3px 3px 0 black;
+  letter-spacing: 13%;
+}
+
+.total-income {
+  display: flex;
+  position: absolute;
+  margin: 0% 0% 0% 0%;
+  top: 29%;
+  left: 8%;
+  font-size: 2vw;
+  font-weight: 500;
+  color: #5b994d;
+}
+
+.total-amount {
+  display: flex;
+  position: absolute;
+  margin: 0 0 0 0%;
+  top: 29%;
+  left: 18%;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #5b994d;
+}
+
+.total-expense {
+  display: flex;
+  position: absolute;
+  margin: 0 0 0 0%;
+  top: 27%;
+  left: 45%;
+  font-size: 1.4vw;
+  font-weight: 500;
+  color: #850b0b;
+}
+
+.expense-amount {
+  display: flex;
+  position: absolute;
+  margin: 0 0 0 0%;
+  top: 30%;
+  left: 44%;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #e74c0f;
+}
+
+.current-balance {
+  display: flex;
+  position: absolute;
+  margin: 0 0 0 0%;
+  top: 29%;
+  left: 70%;
+  font-size: 2vw;
+  font-weight: 500;
+  color: #850b0b;
+  background-image: url(../善款流水明细image/余额背景.png);
+  z-index: 10;
+}
+
+.balance-amount {
+  display: flex;
+  position: absolute;
+  top: 29%;
+  left: 78%;
+  font-size: 2vw;
+  font-weight: bold;
+  color: #a10296c9;
+  z-index: 10;
+}
+
+.fund-record {
+  display: flex;
+  width: 100%;
+  font-size: 1.5vw;
+  color: #550120;
+  margin: 0% 0% 0% 1%;
+  gap: 1%;
+}
+.fund-record-2 {
+  display: flex;
+  width: 100%;
+  font-size: 1.5vw;
+  color: #550120;
+  margin: 0% 0% 0% 1%;
+  gap: 1%;
+}
+.fund-record-3 {
+  display: flex;
+  width: 100%;
+  font-size: 1.5vw;
+  color: #550120;
+  margin: 0% 0% 0% 1%;
+  gap: 1%;
+}
+.fund-record .record-amount {
+  color: #a11f11;
+  font-weight: 500;
+}
+.record-amount-green {
+  display: flex;
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: #037834;
+}
+.fund-record-2 .record-amount-red {
+  color: #a11f11;
+  font-weight: 500;
+}
+.fund-record-3 .record-amount-red {
+  color: #a11f11;
+  font-weight: 500;
+}
+.record-divider {
+  display: flex;
+  margin: 0% 0% 0% 0%;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.record-divider-2 {
+  display: flex;
+  margin: 0% 0% 0% 0%;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.record-divider-3 {
+  display: flex;
+  margin: 0% 0% 0% 0%;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.import-amount {
+  display: flex;
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: #037834;
+}
+
+.cat-head-icon {
+  display: flex;
+  background-image: url(../善款流水明细image/猫猫头.png);
+  background-size: 100% 100%;
+  width: 5%;
+  height: 80%;
+}
+
+.cat-head-icon-2 {
+  display: flex;
+  background-image: url(../善款流水明细image/猫猫头.png);
+  background-size: 100% 100%;
+  width: 5%;
+  height: 80%;
+}
+
+.cat-head-icon-3 {
+  display: flex;
+  background-image: url(../善款流水明细image/猫猫头.png);
+  background-size: 100% 100%;
+  width: 5%;
+  height: 80%;
+}
+
+.expense-amount-850 {
+  display: flex;
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: #037834;
+}
+
+.chart-container {
+  display: flex;
+  /* position: absolute; */
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 0%;
+}
+
+.chart-bars {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+.chart-bar {
+  width: 100%;
+  background: linear-gradient(to top, #27ae60, #2ecc71);
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  transition: height 0.3s ease;
+}
+
+.chart-bar:nth-child(2) {
+  background: linear-gradient(to top, #3498db, #5dade2);
+}
+
+.chart-bar:nth-child(3) {
+  background: linear-gradient(to top, #f39c12, #f5b041);
+}
+
+.chart-bar:nth-child(4) {
+  background: linear-gradient(to top, #e74c3c, #ec7063);
+}
+
+.chart-bar:nth-child(5) {
+  background: linear-gradient(to top, #9b59b6, #bb8fce);
+}
+
+/* .chart-bar span {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4vw;
+  color: #333;
+  white-space: nowrap;
+} */
+
+.chart-bar .bar-value {
+  position: absolute;
+  top: 0%;
+  margin: -36% 0% 0% 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2vw;
+  font-weight: bold;
+  color: #333;
+}
+
+.chart-container-2 {
+  display: flex;
+  /* position: absolute; */
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 0%;
+}
+
+.chart-bars-2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+.chart-bar-2 {
+  width: 100%;
+  background: linear-gradient(to top, #1abc9c, #1dd2af);
+  border-radius: 5px 5px 0 0;
+  position: relative;
+  transition: height 0.3s ease;
+}
+
+.chart-bar-2:nth-child(2) {
+  background: linear-gradient(to top, #9b59b6, #bb8fce);
+}
+
+.chart-bar-2:nth-child(3) {
+  background: linear-gradient(to top, #e67e22, #f39c12);
+}
+
+.chart-bar-2:nth-child(4) {
+  background: linear-gradient(to top, #34495e, #4a6785);
+}
+
+.chart-bar-2:nth-child(5) {
+  background: linear-gradient(to top, #16a085, #1abc9c);
+}
+
+/* .chart-bar-2 span {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4vw;
+  color: #333;
+  white-space: nowrap;
+} */
+.mouth {
+  position: absolute;
+  bottom: 0%;
+  margin: 0% 0% -25% 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.4vw;
+  color: #333;
+  white-space: nowrap;
+}
+.chart-bar-2 .bar-value-2 {
+  position: absolute;
+  top: 0%;
+  margin: -36% 0% 0% 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2vw;
+  font-weight: bold;
+  color: #333;
+}

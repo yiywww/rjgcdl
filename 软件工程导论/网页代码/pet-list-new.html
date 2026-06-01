@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宠物列表</title>
+    <link rel="stylesheet" href="pet-list-new.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <header class="pet-list-header">
+        <div class="header-left">
+          <a href="index.html" class="back-btn">
+            <img
+              src="../宠物列表image/猫爪返回按钮.png"
+              alt="返回"
+              class="paw-back-icon"
+            />
+          </a>
+        </div>
+        <div class="header-right">
+          <div class="search-module">
+            <div class="search-base-bg">
+              <div class="search-content">
+                <div class="title-group">
+                  <img
+                    src="../宠物列表image/宠物列表图标.png"
+                    alt="宠物列表"
+                    class="pet-list-icon"
+                  />
+                  <h1 class="page-title">宠物列表</h1>
+                </div>
+                <div class="search-box">
+                  <input type="text" class="search-input" placeholder="搜索…" />
+                  <img
+                    src="../宠物列表image/放大镜.png"
+                    alt="搜索"
+                    class="search-icon-img"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <nav class="category-nav">
+        <div class="nav-item active">全部</div>
+        <div class="nav-item">猫咪</div>
+        <div class="nav-item">狗狗</div>
+        <div class="nav-item">其他</div>
+      </nav>
+
+      <!-- 主内容区域 -->
+      <main class="main-content">
+        <!-- 分类栏占位 -->
+        <div class="category-bar"></div>
+
+        <!-- 宠物卡片网格容器 - 3行2列布局 -->
+        <section class="card-grid-container">
+          <!-- 卡片1 - 第一行第一列 -->
+          <article class="pet-card-item" data-pet-id="pet_001">
+            <div class="card-content">
+              <!-- 上方黄色区域 - 照片+名字+标签 -->
+              <div class="card-top-section">
+                <div class="pet-photo-square">
+                  <img
+                    src="../宠物列表image/奶糖.png"
+                    alt="小猫照片"
+                    class="pet-photo"
+                  />
+                </div>
+                <div class="pet-name-tags">
+                  <div class="name-gender-container">
+                    <h3 class="pet-name">奶糖</h3>
+                    <img
+                      src="../宠物列表image/雌性标签.png"
+                      alt="雌性"
+                      class="gender-icon-topright"
+                    />
+                  </div>
+                  <div class="pet-tags">
+                    <span class="tag">布偶猫</span>
+                    <span class="tag">未绝育</span>
+                    <span class="tag">已接种</span>
+                    <span class="tag">已驱虫</span>
+                    <span class="tag">健康</span>
+                  </div>
+                  <!-- 下方绿色区域 - 年龄 -->
+                  <p class="pet-age">年龄：六个月</p>
+                </div>
+              </div>
+              <!-- 下方绿色区域 - 性格描述 -->
+              <div class="card-green-section">
+                <p class="pet-description">
+                  性格：大大咧咧，贪吃佛系，适应力极强<br />
+                  习惯：能吃能睡，不挑窝，和其他宠物相处友好
+                </p>
+              </div>
+              <!-- 底部领养按钮区域 -->
+              <div class="card-button-section">
+                <button class="adopt-button">
+                  <img
+                    src="../宠物列表image/立即领养按钮.png"
+                    alt="立即领养"
+                    class="button-image"
+                  />
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 卡片2 - 第一行第二列 -->
+          <article class="pet-card-item">
+            <div class="card-content">
+              <!-- 上方黄色区域 - 照片+名字+标签 -->
+              <div class="card-top-section">
+                <div class="pet-photo-square"></div>
+                <div class="pet-name-tags">
+                  <div class="name-gender-container">
+                    <h3 class="pet-name"></h3>
+                    <img
+                      src="../宠物列表image/雌性标签.png"
+                      alt="雌性"
+                      class="gender-icon-topright"
+                    />
+                  </div>
+                  <div class="pet-tags"></div>
+                  <!-- 下方绿色区域 - 年龄 -->
+                  <p class="pet-age"></p>
+                </div>
+              </div>
+              <!-- 下方绿色区域 - 性格描述 -->
+              <div class="card-green-section">
+                <p class="pet-description"></p>
+              </div>
+              <!-- 底部领养按钮区域 -->
+              <div class="card-button-section">
+                <button class="adopt-button">
+                  <img
+                    src="../宠物列表image/立即领养按钮.png"
+                    alt="立即领养"
+                    class="button-image"
+                  />
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 卡片3 - 第二行第一列 -->
+          <article class="pet-card-item">
+            <div class="card-content">
+              <!-- 上方黄色区域 - 照片+名字+标签 -->
+              <div class="card-top-section">
+                <div class="pet-photo-square"></div>
+                <div class="pet-name-tags">
+                  <div class="name-gender-container">
+                    <h3 class="pet-name"></h3>
+                    <img
+                      src="../宠物列表image/雄性标签.png"
+                      alt="雄性"
+                      class="gender-icon-topright"
+                    />
+                  </div>
+                  <div class="pet-tags"></div>
+                  <!-- 下方绿色区域 - 年龄 -->
+                  <p class="pet-age"></p>
+                </div>
+              </div>
+              <!-- 下方绿色区域 - 性格描述 -->
+              <div class="card-green-section">
+                <p class="pet-description"></p>
+              </div>
+              <!-- 底部领养按钮区域 -->
+              <div class="card-button-section">
+                <button class="adopt-button">
+                  <img
+                    src="../宠物列表image/立即领养按钮.png"
+                    alt="立即领养"
+                    class="button-image"
+                  />
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 卡片4 - 第二行第二列 -->
+          <article class="pet-card-item">
+            <div class="card-content">
+              <!-- 上方黄色区域 - 照片+名字+标签 -->
+              <div class="card-top-section">
+                <div class="pet-photo-square"></div>
+                <div class="pet-name-tags">
+                  <div class="name-gender-container">
+                    <h3 class="pet-name"></h3>
+                    <img
+                      src="../宠物列表image/雄性标签.png"
+                      alt="雄性"
+                      class="gender-icon-topright"
+                    />
+                  </div>
+                  <div class="pet-tags"></div>
+                  <!-- 下方绿色区域 - 年龄 -->
+                  <p class="pet-age"></p>
+                </div>
+              </div>
+              <!-- 下方绿色区域 - 性格描述 -->
+              <div class="card-green-section">
+                <p class="pet-description"></p>
+              </div>
+              <!-- 底部领养按钮区域 -->
+              <div class="card-button-section">
+                <button class="adopt-button">
+                  <img
+                    src="../宠物列表image/立即领养按钮.png"
+                    alt="立即领养"
+                    class="button-image"
+                  />
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 卡片5 - 第三行第一列 -->
+          <article class="pet-card-item">
+            <div class="card-content">
+              <!-- 上方黄色区域 - 照片+名字+标签 -->
+              <div class="card-top-section">
+                <div class="pet-photo-square"></div>
+                <div class="pet-name-tags">
+                  <div class="name-gender-container">
+                    <h3 class="pet-name"></h3>
+                    <img
+                      src="../宠物列表image/雌性标签.png"
+                      alt="雌性"
+                      class="gender-icon-topright"
+                    />
+                  </div>
+                  <div class="pet-tags"></div>
+                  <!-- 下方绿色区域 - 年龄 -->
+                  <p class="pet-age"></p>
+                </div>
+              </div>
+              <!-- 下方绿色区域 - 性格描述 -->
+              <div class="card-green-section">
+                <p class="pet-description"></p>
+              </div>
+              <!-- 底部领养按钮区域 -->
+              <div class="card-button-section">
+                <button class="adopt-button">
+                  <img
+                    src="../宠物列表image/立即领养按钮.png"
+                    alt="立即领养"
+                    class="button-image"
+                  />
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 卡片6 - 第三行第二列 -->
+          <article class="pet-card-item">
+            <div class="card-content">
+              <!-- 上方黄色区域 - 照片+名字+标签 -->
+              <div class="card-top-section">
+                <div class="pet-photo-square"></div>
+                <div class="pet-name-tags">
+                  <div class="name-gender-container">
+                    <h3 class="pet-name"></h3>
+                    <img
+                      src="../宠物列表image/雄性标签.png"
+                      alt="雄性"
+                      class="gender-icon-topright"
+                    />
+                  </div>
+                  <div class="pet-tags"></div>
+                  <!-- 下方绿色区域 - 年龄 -->
+                  <p class="pet-age"></p>
+                </div>
+              </div>
+              <!-- 下方绿色区域 - 性格描述 -->
+              <div class="card-green-section">
+                <p class="pet-description"></p>
+              </div>
+              <!-- 底部领养按钮区域 -->
+              <div class="card-button-section">
+                <button class="adopt-button">
+                  <img
+                    src="../宠物列表image/立即领养按钮.png"
+                    alt="立即领养"
+                    class="button-image"
+                  />
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script src="guest-auth.js"></script>
+    <script>
+      document.querySelectorAll(".adopt-button").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          // 检查是否是游客模式
+          if (localStorage.getItem('userRole') === 'guest') {
+            e.preventDefault();
+            e.stopPropagation();
+            // 手动触发游客模式弹窗
+            if (typeof showGuestModal === 'function') {
+              showGuestModal();
+            } else {
+              // 如果函数不存在，使用简单alert
+              alert("当前为游客模式，请先注册登录");
+            }
+            return;
+          }
+          
+          // 获取按钮所在的卡片
+          const petCard = this.closest(".pet-card-item");
+          // 获取宠物ID
+          const petId = petCard.getAttribute("data-pet-id");
+          // 检查卡片是否有内容（通过检查宠物名字是否为空）
+          const petName = petCard.querySelector(".pet-name");
+
+          if (petName && petName.textContent.trim()) {
+            // 有内容，跳转到领养页面，传递宠物ID
+            window.location.href = `adopt-detail.html?petId=${petId || 'pet_001'}`;
+          } else {
+            // 没有内容，不跳转
+            alert("该宠物信息尚未完善，暂无法领养");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

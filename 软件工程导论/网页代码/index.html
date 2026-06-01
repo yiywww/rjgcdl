@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>像素风宠物领养网站</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="header-global">
+        <div class="header-bg"></div>
+        <div class="header-function-bar">
+          <div class="paw-icon"></div>
+          <div class="search-box">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="搜索宠物品种/名字"
+            />
+            <span class="search-icon"></span>
+          </div>
+          <a href="index.html" class="header-link">首页</a>
+          <div class="login-register-icon-group">
+            <div class="login-register-btn"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 轮播图区域（已修复） -->
+      <div class="banner-area">
+        <div class="banner-carousel">
+          <div class="carousel-list">
+            <div class="carousel-item active">
+              <img src="../image/轮播图/轮播图1.jpg" alt="轮播图1" />
+            </div>
+            <div class="carousel-item">
+              <img src="../image/轮播图/轮播图2.jpg" alt="轮播图2" />
+            </div>
+            <div class="carousel-item">
+              <img src="../image/轮播图/轮播图3.jpg" alt="轮播图3" />
+            </div>
+          </div>
+
+          <div class="carousel-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+          </div>
+
+          <div class="carousel-arrow carousel-arrow-left"></div>
+          <div class="carousel-arrow carousel-arrow-right"></div>
+        </div>
+      </div>
+
+      <div class="function-area">
+        <!-- 宠物列表入口 - 后端接口: GET /api/pets 获取宠物列表数据 -->
+        <a
+          href="pet-list-new.html"
+          class="function-item"
+          data-page="pet-list-new.html"
+          data-api="/api/pets"
+        >
+          <div class="function-icon pet-list-icon"></div>
+          <div class="function-text">宠物列表</div>
+        </a>
+        <!-- 爱心捐赠入口 - 后端接口: GET /api/donations 获取捐赠项目列表 -->
+        <a
+          href="donate.html"
+          class="function-item"
+          data-page="donate.html"
+          data-api="/api/donations"
+        >
+          <div class="function-icon donate-icon"></div>
+          <div class="function-text">爱心捐赠</div>
+        </a>
+        <!-- 救助故事入口 - 后端接口: GET /api/stories 获取救助故事列表 -->
+        <a
+          href="pet-story.html"
+          class="function-item"
+          data-page="pet-story.html"
+          data-api="/api/stories"
+        >
+          <div class="function-icon story-icon"></div>
+          <div class="function-text">救助故事</div>
+        </a>
+        <!-- 个人中心入口 - 后端接口: GET /api/user 获取用户信息 (需登录) -->
+        <a
+          href="profile.html"
+          class="function-item"
+          data-page="profile.html"
+          data-api="/api/user"
+        >
+          <div class="function-icon profile-icon"></div>
+          <div class="function-text">个人中心</div>
+        </a>
+      </div>
+
+      <div class="adopt-area">
+        <div class="adopt-title">热门领养</div>
+        <div class="adopt-card-list">
+          <!-- 宠物卡片1 - 后端接口: GET /api/pets/{id} 获取宠物详情 -->
+          <a
+            href="pet-list.html?pet=1"
+            class="adopt-card"
+            data-pet-id="1"
+            data-api="/api/pets/1"
+          >
+            <div class="pet-img cat1"></div>
+            <div class="pet-name">橘猫</div>
+            <div
+              class="adopt-btn"
+              onclick="
+                event.stopPropagation();
+                event.preventDefault();
+                window.location.href = 'adopt-detail.html';
+              "
+            >
+              立即领养
+            </div>
+          </a>
+          <!-- 宠物卡片2 - 后端接口: GET /api/pets/{id} 获取宠物详情 -->
+          <a
+            href="pet-list.html?pet=2"
+            class="adopt-card"
+            data-pet-id="2"
+            data-api="/api/pets/2"
+          >
+            <div class="pet-img cat2"></div>
+            <div class="pet-name">金渐层</div>
+            <div
+              class="adopt-btn"
+              onclick="
+                event.stopPropagation();
+                event.preventDefault();
+                window.location.href = 'adopt-detail.html';
+              "
+            >
+              立即领养
+            </div>
+          </a>
+          <!-- 宠物卡片3 - 后端接口: GET /api/pets/{id} 获取宠物详情 -->
+          <a
+            href="pet-list.html?pet=3"
+            class="adopt-card"
+            data-pet-id="3"
+            data-api="/api/pets/3"
+          >
+            <div class="pet-img cat3"></div>
+            <div class="pet-name">英短</div>
+            <div
+              class="adopt-btn"
+              onclick="
+                event.stopPropagation();
+                event.preventDefault();
+                window.location.href = 'adopt-detail.html';
+              "
+            >
+              立即领养
+            </div>
+          </a>
+          <!-- 宠物卡片4 - 后端接口: GET /api/pets/{id} 获取宠物详情 -->
+          <a
+            href="pet-list.html?pet=4"
+            class="adopt-card"
+            data-pet-id="4"
+            data-api="/api/pets/4"
+          >
+            <div class="pet-img cat4"></div>
+            <div class="pet-name">布偶</div>
+            <div
+              class="adopt-btn"
+              onclick="
+                event.stopPropagation();
+                event.preventDefault();
+                window.location.href = 'adopt-detail.html';
+              "
+            >
+              立即领养
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="guest-auth.js"></script>
+    <script>
+      // 登录按钮跳转
+      document
+        .querySelector(".login-register-btn")
+        .addEventListener("click", () => {
+          window.location.href = "login.html";
+        });
+
+      /* ==================== 功能入口区交互 ====================
+       * 功能入口已使用<a>标签实现跳转，支持无JS环境下的基础链接跳转
+       * 以下JS代码仅用于扩展功能和埋点统计
+       */
+
+      /* ==================== 搜索功能接口预留 ====================
+       * 接口: POST /api/search
+       * 请求: { keyword: string }
+       * 返回: { code: number, msg: string, data: { pets: Pet[] } }
+       * 后端需提供搜索关键词接口，用于搜索宠物
+       */
+      const searchInput = document.querySelector(".search-input");
+      const searchBox = document.querySelector(".search-box");
+      searchInput.addEventListener("focus", () => {
+        searchBox.classList.add("active");
+      });
+      searchInput.addEventListener("blur", () => {
+        if (!searchInput.value) searchBox.classList.remove("active");
+      });
+      searchInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          const keyword = searchInput.value.trim();
+          if (keyword) {
+            /* TODO: 后端接口调用
+             * fetch('/api/search', {
+             *   method: 'POST',
+             *   headers: { 'Content-Type': 'application/json' },
+             *   body: JSON.stringify({ keyword })
+             * })
+             */
+            window.location.href = `pet-list.html?search=${encodeURIComponent(keyword)}`;
+          }
+        }
+      });
+
+      // 为搜索框添加点击事件
+      document.querySelector(".search-icon").addEventListener("click", () => {
+        const keyword = searchInput.value.trim();
+        if (keyword) {
+          /* TODO: 后端接口调用 (同上) */
+          window.location.href = `pet-list.html?search=${encodeURIComponent(keyword)}`;
+        }
+      });
+
+      // ====================== 轮播图JS（已修复）======================
+      const bannerCarousel = document.querySelector(".banner-carousel");
+      const carouselList = document.querySelector(".carousel-list");
+      const carouselItems = document.querySelectorAll(".carousel-item");
+      const dots = document.querySelectorAll(".dot");
+      let currentIndex = 0;
+      let autoSwitchInterval = null;
+      const SWITCH_INTERVAL = 1000;
+
+      function switchToSlide(index) {
+        carouselItems.forEach((item, i) => {
+          item.classList.toggle("active", i === index);
+        });
+        currentIndex = index;
+        dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+      }
+
+      function nextSlide() {
+        const nextIndex = (currentIndex + 1) % carouselItems.length;
+        switchToSlide(nextIndex);
+      }
+
+      function startAutoSwitch() {
+        if (!autoSwitchInterval)
+          autoSwitchInterval = setInterval(nextSlide, SWITCH_INTERVAL);
+      }
+
+      function stopAutoSwitch() {
+        clearInterval(autoSwitchInterval);
+        autoSwitchInterval = null;
+      }
+
+      bannerCarousel.addEventListener("mouseenter", stopAutoSwitch);
+      bannerCarousel.addEventListener("mouseleave", startAutoSwitch);
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => switchToSlide(index));
+      });
+
+      document
+        .querySelector(".carousel-arrow-left")
+        .addEventListener("click", () => {
+          const prevIndex =
+            (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+          switchToSlide(prevIndex);
+        });
+
+      document
+        .querySelector(".carousel-arrow-right")
+        .addEventListener("click", nextSlide);
+
+      switchToSlide(0);
+      startAutoSwitch();
+    </script>
+  </body>
+</html>

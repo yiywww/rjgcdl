@@ -1,0 +1,409 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.page-container {
+  width: 600px;
+  height: 917px;
+  min-height: auto;
+  background-image: url("../image/首页/首页背景图.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.pet-list-header {
+  width: calc(100% - 30px);
+  max-width: 570px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 25px 0 30px;
+  gap: 10px;
+}
+
+.header-left {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.back-btn {
+  display: block;
+  text-decoration: none;
+}
+
+.paw-back-icon {
+  width: 80px;
+  height: 61px;
+  object-fit: cover;
+  cursor: pointer;
+  background: transparent;
+}
+
+.header-right {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-module {
+  width: 100%;
+}
+
+.search-base-bg {
+  width: 100%;
+  height: 66px;
+  background-image: url("../宠物列表image/最底层搜索图标.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  position: relative;
+}
+
+.search-content {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.title-group {
+  position: absolute;
+  left: 62px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.pet-list-icon {
+  width: 48px;
+  height: 45px;
+  object-fit: cover;
+  mix-blend-mode: multiply;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.page-title {
+  font-family: "FZHei-B01", "方正黑体", "Microsoft YaHei", sans-serif;
+  font-size: 38px;
+  font-weight: 900;
+  color: #000000;
+  white-space: nowrap;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.search-box {
+  width: 120px;
+  height: 40px;
+  background-image: url("../宠物列表image/搜索背景图.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.search-input {
+  flex: 1;
+  width: 100%;
+  height: 26px;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 18px;
+  color: #000000;
+  font-family: inherit;
+  line-height: 26px;
+}
+
+.search-input::placeholder {
+  color: #000000;
+}
+
+.search-icon-img {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin-left: 4px;
+  mix-blend-mode: multiply;
+}
+
+.category-nav {
+  width: calc(100% - 30px);
+  max-width: 570px;
+  height: 46px;
+  margin: 0 auto 10px;
+  background-image: url("../宠物列表image/导航栏背景图.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.nav-item {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "FZHei-B01", "方正黑体", "Microsoft YaHei", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-item.active {
+  color: #1a1a1a;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.main-content {
+  width: calc(100% - 30px);
+  max-width: 570px;
+  margin: 0 auto;
+  padding: 0 0 15px;
+}
+
+.category-bar {
+  display: none;
+}
+
+.card-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.pet-card-item {
+  background-image: url("../宠物列表image/列表背景图.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(180, 180, 180, 0.25);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 12px 10px 8px;
+  min-height: 210px;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.pet-card-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  min-height: 185px;
+}
+
+.card-top-section {
+  display: flex;
+  gap: 0px;
+  align-items: flex-start;
+  padding: 0 2px;
+}
+
+.pet-photo-square {
+  width: 100px;
+  height: 100px;
+  background: rgba(245, 245, 245, 0.9);
+  border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 9px;
+  margin-left: 3px;
+}
+.pet-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 自动裁剪适配，不变形 */
+}
+.pet-name-tags {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 0;
+}
+
+.name-gender-container {
+  position: relative;
+  width: 100%;
+  min-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px 0 0;
+}
+
+.gender-icon-topright {
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  width: 50px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.pet-name {
+  font-family: "FZHei-B01", "方正黑体", "Microsoft YaHei", sans-serif;
+  font-size: 27px;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 0;
+  text-align: center;
+}
+
+.pet-tags {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px 0px;
+  max-width: 100%;
+  justify-items: start;
+  padding-left: 10px;
+}
+
+.card-green-section {
+  padding: 5px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  flex: 1;
+}
+
+.tag {
+  background-image: url("../宠物列表image/标签.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #87ceeb;
+  color: #1a1a1a;
+  font-size: 8px;
+  font-weight: 900;
+  padding: 7px 9px;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+
+.pet-age {
+  font-family: "FZHei-B01", "方正黑体", "Microsoft YaHei", sans-serif;
+  font-size: 16px;
+  color: #98c2e8;
+  font-weight: 600;
+  margin: 0 0 0 11px;
+  text-align: right;
+  padding: 0px 0 0 0;
+  min-height: 18px;
+  line-height: 1.2;
+  width: 97px;
+}
+
+.pet-description {
+  font-size: 11px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+  padding: 0px 8px 0;
+}
+
+.card-button-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: auto;
+}
+
+.adopt-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.button-image {
+  height: 36px;
+  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .card-grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+  }
+
+  .pet-card-item {
+    padding: 12px;
+    min-height: 145px;
+  }
+
+  .pet-photo-placeholder {
+    width: 68px;
+    height: 100px;
+  }
+
+  .pet-name {
+    font-size: 14px;
+  }
+
+  .tag {
+    font-size: 8px;
+    padding: 2px 4px;
+  }
+}

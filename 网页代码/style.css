@@ -1,0 +1,437 @@
+banner/* 全局重置与基础设置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 网页容器 - 固定 414x896 */
+.page-container {
+  width: 600px;
+  height: 917px;
+  margin: 0 auto;
+  background-image: url("../image/首页/首页背景图.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 头部区域 */
+.header-global {
+  width: 100%;
+  height: 100px;
+  position: relative; /* 让子元素绝对定位 */
+}
+
+.header-bg {
+  width: 100%;
+  height: 125%;
+  background-image: url("../image/首页/header.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.search-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 12px;
+  color: #070000;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input:focus::placeholder {
+  color: transparent;
+}
+
+/* Banner 区域 */
+.banner-area {
+  width: 85%;
+  height: 280px;
+  margin: 15px auto;
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* 功能入口区 */
+.function-area {
+  width: 100%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.function-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.function-item:hover {
+  background-color: rgba(248, 165, 194, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.function-item:active {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.function-icon {
+  width: 90px;
+  height: 85px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.function-item:hover .function-icon {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+.function-text {
+  font-size: 18px;
+  color: #333;
+}
+
+/* 👇 宠物列表图标 */
+.pet-list-icon {
+  background-image: url("../image/按钮图标/宠物列表图标.jpg"); /* 改成你的图片路径 */
+}
+
+/* 👇 爱心捐赠图标 */
+.donate-icon {
+  background-image: url("../image/按钮图标/爱心捐赠图标 .jpg"); /* 改成你的图片路径 */
+}
+
+/* 👇 救助故事图标 */
+.story-icon {
+  background-image: url("../image/按钮图标/救助故事图标.jpg"); /* 改成你的图片路径 */
+}
+
+/* 👇 个人中心图标 */
+.profile-icon {
+  background-image: url("../image/按钮图标/个人中心.jpg"); /* 改成你的图片路径 */
+}
+/* 热门领养区 */
+.adopt-area {
+  width: 95%;
+  margin: 20px auto 0;
+}
+
+.adopt-title {
+  font-size: 35px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 15px;
+  padding-left: 5px;
+}
+
+.adopt-card-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adopt-card {
+  width: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url("../image/领养卡片背景图.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.adopt-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  border-color: #f8a5c2;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.adopt-card:active {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pet-img {
+  width: 50px;
+  height: 50px;
+  background-image: url("../image/宠物头像/橘猫.jpg"); /* 👈 你的喵喵图片路径 */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.pet-name {
+  font-size: 12px;
+  color: #333;
+}
+.cat1 {
+  background-image: url("../image/热门领养喵喵/喵喵1号.png");
+}
+.cat2 {
+  background-image: url("../image/热门领养喵喵/喵喵2号.png");
+}
+.cat3 {
+  background-image: url("../image/热门领养喵喵/喵喵3号.png");
+}
+.cat4 {
+  background-image: url("../image/热门领养喵喵/喵喵4号.png");
+}
+.adopt-btn {
+  width: 60px;
+  height: 25px;
+  background-color: #facc15;
+  border: 1px solid #d97706;
+  border-radius: 4px;
+  font-size: 10px;
+  text-align: center;
+  line-height: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.adopt-btn:hover {
+  background-color: #f59e0b;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(217, 119, 6, 0.4);
+}
+
+.adopt-btn:active {
+  transform: scale(0.95);
+}
+
+/* 👇 新增：头部功能栏布局（只控制爪爪+搜索框+登录注册的排列） */
+.header-function-bar {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.paw-icon {
+  width: 50px;
+  height: 50px;
+  background-image: url("../image/按钮图标/爪爪图标.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+}
+
+.search-box {
+  mix-blend-mode: multiply;
+  flex: 1;
+  max-width: 400px;
+  height: 30px;
+  background-image: url("../image/首页/搜索框.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 35px;
+  position: relative;
+  cursor: pointer;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url("../image/按钮图标/查询放大镜图标.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  mix-blend-mode: multiply;
+}
+
+.header-link {
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.header-link:hover {
+  background-color: rgba(248, 165, 194, 0.2);
+  color: #f8a5c2;
+  transform: translateY(-2px);
+}
+
+.login-register-icon-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* 👇 新增：登录注册单按钮样式（替换原来的login/register-icon） */
+.login-register-btn {
+  width: 80px;
+  height: 30px;
+  background-image: url("../image/按钮图标/登录键.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+
+/* 👇 新增：轮播图样式（直接粘在CSS最后） */
+.banner-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.carousel-list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-item img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.dot.active {
+  background: #fff;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.1);
+  opacity: 1;
+}
+
+.carousel-arrow:active {
+  transform: translateY(-50%) scale(0.95);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.carousel-arrow::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.carousel-arrow-left {
+  left: 10px;
+}
+
+.carousel-arrow-left::before {
+  border-width: 7px 10px 7px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.carousel-arrow-right {
+  right: 10px;
+}
+
+.carousel-arrow-right::before {
+  border-width: 7px 0 7px 10px;
+  border-color: transparent transparent transparent #fff;
+}

@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宠物故事</title>
+    <link rel="stylesheet" href="pet-story.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <!-- 头部区域 -->
+      <header class="story-header">
+        <!-- 左侧返回按钮区域 -->
+        <div class="header-left">
+          <a href="index.html" class="back-btn">
+            <img
+              src="../宠物故事image/返回按钮.png"
+              alt="返回"
+              class="paw-back-icon"
+            />
+          </a>
+        </div>
+
+        <!-- 右侧搜索功能模块 -->
+        <div class="header-right">
+          <div class="search-module">
+            <!-- 底层背景 -->
+            <div class="header-bg-base">
+              <!-- 图标+标题+搜索框容器 -->
+              <div class="header-content">
+                <!-- 左侧图标与标题组 -->
+                <div class="title-group">
+                  <img
+                    src="../宠物故事image/宠物故事图标.png"
+                    alt="宠物故事"
+                    class="story-icon"
+                  />
+                  <h1 class="story-title">宠物故事</h1>
+                </div>
+
+                <!-- 右侧搜索框 -->
+                <div class="search-box">
+                  <input type="text" placeholder="搜索…" class="search-input" />
+                  <img
+                    src="../宠物故事image/搜索放大镜.png"
+                    alt="搜索"
+                    class="search-icon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 引言模块 -->
+      <section class="intro-section">
+        <div class="intro-container">
+          <!-- 左侧文字区域 -->
+          <div class="intro-text-area">
+            <h2 class="intro-title">每一次相遇，都是生命的温暖救赎</h2>
+            <p class="intro-content">
+              这里的每一只小动物，都曾经历过流浪、病痛与无助。它们在风雨中蜷缩，在角落里等待，幸运的是，它们遇见了善意，被救助、被照顾、被治愈。我们希望用这些真实的故事，让更多人看见生命的珍贵，也让每一份爱心，都能找到温暖的归宿。
+            </p>
+          </div>
+
+          <!-- 右侧图像区域 -->
+          <div class="intro-image-area">
+            <img
+              src="../宠物故事image/导语小狗.jpg"
+              alt="抱着红心的小狗"
+              class="intro-dog-img"
+            />
+            <img
+              src="../宠物故事image/导语小猫.jpg"
+              alt="抱着黄星星的小猫"
+              class="intro-cat-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 故事卡片区 -->
+      <section class="story-cards-section">
+        <div class="cards-container">
+          <!-- 卡片1：奶糖故事 -->
+          <div
+            class="story-card"
+            data-modal-title="布偶猫奶糖"
+            data-modal-story1="深秋的夜晚，寒风刺骨，只有六个月大的布偶猫奶糖，被遗弃在小区楼道口。它浑身发抖，毛发凌乱，怯生生地不敢靠近任何人。发现它时，它正缩在角落，用无助的眼神望着过往行人。"
+            data-modal-story2="我们将它带回救助站，细心喂养，悉心照料。从最初的胆小警惕，到后来的温顺粘人，奶糖慢慢卸下防备，学会了信任与依赖。如今的它，干净漂亮，安静乖巧，渴望一个可以长久依靠的家。"
+          >
+            <div class="card-inner">
+              <!-- 宠物图片占位 -->
+              <div class="card-image-area">
+                <img
+                  src="../宠物故事image/奶糖.png"
+                  alt="奶糖"
+                  class="pet-image"
+                />
+              </div>
+              <div class="card-text-area">
+                <h3 class="pet-name-bold">奶糖</h3>
+                <p class="story-subtitle">从寒风中到温柔怀抱</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 卡片2：橘子故事 -->
+          <div
+            class="story-card"
+            data-modal-title="橘子"
+            data-modal-story1="大橘猫橘子，曾是街头的流浪常客，居无定所，靠捡拾食物勉强生存。长期的流浪生活让它身形消瘦，还伴有轻微的营养不良。被救助时，它对人充满防备，却又在感受到善意后，慢慢放下警惕。"
+            data-modal-story2="经过一段时间的调养，橘子逐渐恢复健康，性格也变得开朗随和。它贪吃又佛系，温顺又亲人，适应力极强，无论环境如何变化，都能安心生活。它用自己的经历告诉我们，即使历经漂泊，也依然能被温柔以待。"
+          >
+            <div class="card-inner">
+              <div class="card-image-area">
+                <img
+                  src="../宠物故事image/橘子.png"
+                  alt="橘子"
+                  class="pet-image"
+                />
+              </div>
+              <div class="card-text-area">
+                <h3 class="pet-name-bold">橘子</h3>
+                <p class="story-subtitle">流浪的大橘，终于有了归宿</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 卡片3：雪球故事 -->
+          <div
+            class="story-card"
+            data-modal-title="雪球"
+            data-modal-story1="四个月大的雪球，是被好心人在草丛中发现的。它身形娇小，体弱胆小，还未接种疫苗，在野外随时面临危险。小小的身躯，却有着对世界强烈的好奇与求生的渴望。"
+            data-modal-story2="救助站为它提供了安全的环境，定时喂养，细心看护。如今的雪球，活泼好动，调皮可爱，对一切充满好奇。它还在等待成长，也在等待一个愿意包容它所有小调皮，给它一生安稳的主人。"
+          >
+            <div class="card-inner">
+              <div class="card-image-area">
+                <img
+                  src="../宠物故事image/雪球.png"
+                  alt="雪球"
+                  class="pet-image"
+                />
+              </div>
+              <div class="card-text-area">
+                <h3 class="pet-name-bold">雪球</h3>
+                <p class="story-subtitle">弱小的生命，也值得被守护</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 卡片4：布丁故事 -->
+          <div
+            class="story-card"
+            data-modal-title="布丁"
+            data-modal-story1="柯基布丁，曾因主人疏忽而流浪，小短腿在街头奔波，找不到方向。它活泼亲人，却在流浪中变得小心翼翼，害怕再次被抛弃。"
+            data-modal-story2="被救助后，布丁慢慢找回了原本开朗的天性，喜欢奔跑，喜欢互动，对人十分友好。它健康活泼，聪明懂事，经历过失去，才更懂得珍惜陪伴。它期待着一个不会离开的家，一个可以尽情撒娇、快乐成长的归宿。"
+          >
+            <div class="card-inner">
+              <div class="card-image-area">
+                <img
+                  src="../宠物故事image/布丁.png"
+                  alt="布丁"
+                  class="pet-image"
+                />
+              </div>
+              <div class="card-text-area">
+                <h3 class="pet-name-bold">布丁</h3>
+                <p class="story-subtitle">被遗弃的小短腿，重新拥抱阳光</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 底部 Banner 区域 -->
+      <section class="footer-banner">
+        <div class="banner-container">
+          <!-- 左侧小猫 -->
+          <div class="banner-left">
+            <img
+              src="../宠物故事image/结束语小猫.png"
+              alt="像素小猫抱爱心"
+              class="banner-cat"
+            />
+          </div>
+
+          <!-- 中间文案 -->
+          <div class="banner-center">
+            <p class="banner-text">
+              每一次救助，都是一次生命的接力<br />
+              每一次领养，都是一份长久的承诺<br />
+              它们或许不完美，却真诚又纯粹<br />
+              它们曾历经坎坷，却依然愿意相信人类<br />
+              愿每一个小生命，都能被世界温柔以待<br />
+              愿每一份爱心，都能成就一个温暖的家
+            </p>
+          </div>
+
+          <!-- 右侧小狗 -->
+          <div class="banner-right">
+            <img
+              src="../宠物故事image/结束语小狗.jpg"
+              alt="像素小狗抱爱心"
+              class="banner-dog"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 其他区域 -->
+      <main class="main-content">
+        <!-- 内容区域预留 -->
+      </main>
+    </div>
+
+    <!-- 故事详情弹窗 -->
+    <div class="story-modal-overlay" id="storyModal">
+      <div class="story-modal">
+        <img
+          src="../宠物故事详情界面image/窗口背景.png"
+          alt="故事详情背景"
+          class="modal-bg-img"
+        />
+        <div class="modal-pet-name">布偶猫奶糖</div>
+        <div class="modal-pet-img">
+          <!-- 左边单张图片 -->
+          <div class="single-img-container">
+            <img
+              src="../宠物故事详情界面image/卡通小白猫2.png"
+              class="single-pet-img"
+            />
+          </div>
+
+          <!-- 右边单张图片 -->
+          <div class="single-img-container-2">
+            <img
+              src="../宠物故事详情界面image/卡通小白猫2.png"
+              class="single-pet-img"
+            />
+          </div>
+        </div>
+
+        <!-- 故事描述文字 -->
+        <div class="modal-story-text-title">
+          <div class="modal-story-text">
+            深秋的夜晚，寒风刺骨，只有六个月大的布偶猫奶糖，被遗弃在小区楼道口。它浑身发抖，毛发凌乱，怯生生地不敢靠近任何人。发现它时，它正缩在角落，用无助的眼神望着过往行人。
+          </div>
+
+          <!-- 故事描述文字第二部分 -->
+          <div class="modal-story-text-2">
+            我们将它带回救助站，细心喂养，悉心照料。从最初的胆小警惕，到后来的温顺粘人，奶糖慢慢卸下防备，学会了信任与依赖。如今的它，干净漂亮，安静乖巧，渴望一个可以长久依靠的家。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="guest-auth.js"></script>
+    <script>
+      // 仅绑定有故事数据的故事卡片弹窗
+      const storyCards = document.querySelectorAll(
+        ".story-card[data-modal-title][data-modal-story1][data-modal-story2]",
+      );
+      const modal = document.getElementById("storyModal");
+      const modalPetName = modal.querySelector(".modal-pet-name");
+      const modalStoryText = modal.querySelector(".modal-story-text");
+      const modalStoryText2 = modal.querySelector(".modal-story-text-2");
+
+      storyCards.forEach((card) => {
+        card.addEventListener("click", () => {
+          const title = card.dataset.modalTitle || "故事详情";
+          const story1 = card.dataset.modalStory1 || "暂无故事内容。";
+          const story2 = card.dataset.modalStory2 || "暂无更多内容。";
+
+          modalPetName.textContent = title;
+          modalStoryText.textContent = story1;
+          modalStoryText2.textContent = story2;
+
+          modal.style.display = "flex";
+          document.body.style.overflow = "hidden";
+        });
+      });
+
+      // 点击遮罩层关闭弹窗
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      // 滑动功能实现
+      let startX = 0;
+      let currentX = 0;
+      let translateX = 0;
+      let isDragging = false;
+      const swipeContainer = document.getElementById("swipeContainer");
+      const swipeWrapper = swipeContainer
+        ? swipeContainer.querySelector(".swipe-wrapper")
+        : null;
+
+      if (swipeWrapper) {
+        const itemWidth = 174; // 每个滑动项的宽度
+        const gap = 9; // 间距
+        const totalItems = swipeWrapper.children.length;
+        const maxTranslateX = -(totalItems - 1) * (itemWidth + gap);
+
+        // 触摸开始
+        swipeContainer.addEventListener("touchstart", (e) => {
+          isDragging = true;
+          startX = e.touches[0].clientX;
+          swipeWrapper.style.transition = "none";
+        });
+
+        // 触摸移动
+        swipeContainer.addEventListener("touchmove", (e) => {
+          if (!isDragging) return;
+          currentX = e.touches[0].clientX;
+          const diffX = currentX - startX;
+          let newTranslateX = translateX + diffX;
+
+          // 边界限制和回弹效果
+          if (newTranslateX > 0) {
+            newTranslateX = newTranslateX * 0.5; // 左侧回弹
+          } else if (newTranslateX < maxTranslateX) {
+            newTranslateX =
+              maxTranslateX + (newTranslateX - maxTranslateX) * 0.5; // 右侧回弹
+          }
+
+          swipeWrapper.style.transform = `translateX(${newTranslateX}px)`;
+        });
+
+        // 触摸结束
+        swipeContainer.addEventListener("touchend", () => {
+          if (!isDragging) return;
+          isDragging = false;
+          swipeWrapper.style.transition = "transform 0.3s ease-out";
+
+          // 计算最终位置
+          translateX = parseFloat(
+            swipeWrapper.style.transform
+              .replace("translateX(", "")
+              .replace("px)", ""),
+          );
+
+          // 吸附到最近的图片
+          const itemIndex = Math.round(-translateX / (itemWidth + gap));
+          translateX = -itemIndex * (itemWidth + gap);
+
+          // 边界检查
+          translateX = Math.max(translateX, maxTranslateX);
+          translateX = Math.min(translateX, 0);
+
+          swipeWrapper.style.transform = `translateX(${translateX}px)`;
+        });
+
+        // 鼠标拖动
+        swipeContainer.addEventListener("mousedown", (e) => {
+          isDragging = true;
+          startX = e.clientX;
+          swipeWrapper.style.transition = "none";
+          e.preventDefault();
+        });
+
+        swipeContainer.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+          currentX = e.clientX;
+          const diffX = currentX - startX;
+          let newTranslateX = translateX + diffX;
+
+          if (newTranslateX > 0) {
+            newTranslateX = newTranslateX * 0.5;
+          } else if (newTranslateX < maxTranslateX) {
+            newTranslateX =
+              maxTranslateX + (newTranslateX - maxTranslateX) * 0.5;
+          }
+
+          swipeWrapper.style.transform = `translateX(${newTranslateX}px)`;
+        });
+
+        swipeContainer.addEventListener("mouseup", () => {
+          if (!isDragging) return;
+          isDragging = false;
+          swipeWrapper.style.transition = "transform 0.3s ease-out";
+
+          translateX = parseFloat(
+            swipeWrapper.style.transform
+              .replace("translateX(", "")
+              .replace("px)", ""),
+          );
+          const itemIndex = Math.round(-translateX / (itemWidth + gap));
+          translateX = -itemIndex * (itemWidth + gap);
+          translateX = Math.max(translateX, maxTranslateX);
+          translateX = Math.min(translateX, 0);
+
+          swipeWrapper.style.transform = `translateX(${translateX}px)`;
+        });
+
+        // 鼠标离开时停止拖动
+        swipeContainer.addEventListener("mouseleave", () => {
+          if (isDragging) {
+            isDragging = false;
+            swipeWrapper.style.transition = "transform 0.3s ease-out";
+
+            translateX = parseFloat(
+              swipeWrapper.style.transform
+                .replace("translateX(", "")
+                .replace("px)", ""),
+            );
+            const itemIndex = Math.round(-translateX / (itemWidth + gap));
+            translateX = -itemIndex * (itemWidth + gap);
+            translateX = Math.max(translateX, maxTranslateX);
+            translateX = Math.min(translateX, 0);
+
+            swipeWrapper.style.transform = `translateX(${translateX}px)`;
+          }
+        });
+      }
+
+      // 第二个滑动盒子功能实现
+      let startX2 = 0;
+      let currentX2 = 0;
+      let translateX2 = 0;
+      let isDragging2 = false;
+      const swipeContainer2 = document.getElementById("swipeContainer2");
+      const swipeWrapper2 = swipeContainer2
+        ? swipeContainer2.querySelector(".swipe-wrapper-2")
+        : null;
+
+      if (swipeWrapper2) {
+        const itemWidth2 = 174; // 每个滑动项的宽度
+        const gap2 = 9; // 间距
+        const totalItems2 = swipeWrapper2.children.length;
+        const maxTranslateX2 = -(totalItems2 - 1) * (itemWidth2 + gap2);
+
+        // 触摸开始
+        swipeContainer2.addEventListener("touchstart", (e) => {
+          isDragging2 = true;
+          startX2 = e.touches[0].clientX;
+          swipeWrapper2.style.transition = "none";
+        });
+
+        // 触摸移动
+        swipeContainer2.addEventListener("touchmove", (e) => {
+          if (!isDragging2) return;
+          currentX2 = e.touches[0].clientX;
+          const diffX = currentX2 - startX2;
+          let newTranslateX = translateX2 + diffX;
+
+          if (newTranslateX > 0) {
+            newTranslateX = newTranslateX * 0.5;
+          } else if (newTranslateX < maxTranslateX2) {
+            newTranslateX =
+              maxTranslateX2 + (newTranslateX - maxTranslateX2) * 0.5;
+          }
+
+          swipeWrapper2.style.transform = `translateX(${newTranslateX}px)`;
+        });
+
+        // 触摸结束
+        swipeContainer2.addEventListener("touchend", () => {
+          if (!isDragging2) return;
+          isDragging2 = false;
+          swipeWrapper2.style.transition = "transform 0.3s ease-out";
+
+          translateX2 = parseFloat(
+            swipeWrapper2.style.transform
+              .replace("translateX(", "")
+              .replace("px)", ""),
+          );
+          const itemIndex = Math.round(-translateX2 / (itemWidth2 + gap2));
+          translateX2 = -itemIndex * (itemWidth2 + gap2);
+          translateX2 = Math.max(translateX2, maxTranslateX2);
+          translateX2 = Math.min(translateX2, 0);
+
+          swipeWrapper2.style.transform = `translateX(${translateX2}px)`;
+        });
+
+        // 鼠标拖动
+        swipeContainer2.addEventListener("mousedown", (e) => {
+          isDragging2 = true;
+          startX2 = e.clientX;
+          swipeWrapper2.style.transition = "none";
+          e.preventDefault();
+        });
+
+        swipeContainer2.addEventListener("mousemove", (e) => {
+          if (!isDragging2) return;
+          currentX2 = e.clientX;
+          const diffX = currentX2 - startX2;
+          let newTranslateX = translateX2 + diffX;
+
+          if (newTranslateX > 0) {
+            newTranslateX = newTranslateX * 0.5;
+          } else if (newTranslateX < maxTranslateX2) {
+            newTranslateX =
+              maxTranslateX2 + (newTranslateX - maxTranslateX2) * 0.5;
+          }
+
+          swipeWrapper2.style.transform = `translateX(${newTranslateX}px)`;
+        });
+
+        swipeContainer2.addEventListener("mouseup", () => {
+          if (!isDragging2) return;
+          isDragging2 = false;
+          swipeWrapper2.style.transition = "transform 0.3s ease-out";
+
+          translateX2 = parseFloat(
+            swipeWrapper2.style.transform
+              .replace("translateX(", "")
+              .replace("px)", ""),
+          );
+          const itemIndex = Math.round(-translateX2 / (itemWidth2 + gap2));
+          translateX2 = -itemIndex * (itemWidth2 + gap2);
+          translateX2 = Math.max(translateX2, maxTranslateX2);
+          translateX2 = Math.min(translateX2, 0);
+
+          swipeWrapper2.style.transform = `translateX(${translateX2}px)`;
+        });
+
+        // 鼠标离开时停止拖动
+        swipeContainer2.addEventListener("mouseleave", () => {
+          if (isDragging2) {
+            isDragging2 = false;
+            swipeWrapper2.style.transition = "transform 0.3s ease-out";
+
+            translateX2 = parseFloat(
+              swipeWrapper2.style.transform
+                .replace("translateX(", "")
+                .replace("px)", ""),
+            );
+            const itemIndex = Math.round(-translateX2 / (itemWidth2 + gap2));
+            translateX2 = -itemIndex * (itemWidth2 + gap2);
+            translateX2 = Math.max(translateX2, maxTranslateX2);
+            translateX2 = Math.min(translateX2, 0);
+
+            swipeWrapper2.style.transform = `translateX(${translateX2}px)`;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
