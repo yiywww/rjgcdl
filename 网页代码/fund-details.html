@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>善款流水明细</title>
+    <link rel="stylesheet" href="fund-details.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="header-area">
+        <div class="header-bg">
+          <img
+            src="../善款流水明细image/猫爪返回按钮.png"
+            alt="返回"
+            class="back-icon"
+            id="backBtn"
+          />
+          <div class="page-title-text">善款流水明细</div>
+        </div>
+      </div>
+      <div class="main">
+        <div class="main-frame">
+          <div class="money">
+            <div class="total-income">累计总收入</div>
+            <div class="total-amount">¥12800.00</div>
+            <div class="total-expense">累计总支出</div>
+            <div class="expense-amount">¥7350.00</div>
+            <div class="current-balance">当前结余</div>
+            <div class="balance-amount">¥5450.00</div>
+          </div>
+          <div class="kuang">
+            <div class="frame-green">
+              <div class="chart-container-2">
+                <div class="chart-bars-2">
+                  <div class="chart-bar-2" style="height: 65%">
+                    <span class="mouth">六月</span
+                    ><span class="bar-value-2">¥6500</span>
+                  </div>
+                  <div class="chart-bar-2" style="height: 80%">
+                    <span class="mouth">七月</span
+                    ><span class="bar-value-2">¥8000</span>
+                  </div>
+                  <div class="chart-bar-2" style="height: 75%">
+                    <span class="mouth">八月</span
+                    ><span class="bar-value-2">¥7500</span>
+                  </div>
+                  <div class="chart-bar-2" style="height: 90%">
+                    <span class="mouth">九月</span
+                    ><span class="bar-value-2">¥9000</span>
+                  </div>
+                  <div class="chart-bar-2" style="height: 55%">
+                    <span class="mouth">十月</span
+                    ><span class="bar-value-2">¥5500</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-pink">
+              <div class="chart-container">
+                <div class="chart-bars">
+                  <div class="chart-bar" style="height: 70%">
+                    <span class="mouth">一月</span
+                    ><span class="bar-value">¥7000</span>
+                  </div>
+                  <div class="chart-bar" style="height: 85%">
+                    <span class="mouth">二月</span
+                    ><span class="bar-value">¥8500</span>
+                  </div>
+                  <div class="chart-bar" style="height: 60%">
+                    <span class="mouth">三月</span
+                    ><span class="bar-value">¥6000</span>
+                  </div>
+                  <div class="chart-bar" style="height: 95%">
+                    <span class="mouth">四月</span
+                    ><span class="bar-value">¥9500</span>
+                  </div>
+                  <div class="chart-bar" style="height: 50%">
+                    <span class="mouth">五月</span
+                    ><span class="bar-value">¥5000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list">
+            <div class="record-divider">
+              <div class="cat-head-icon"></div>
+              <div class="fund-record">
+                <span>2026-04-29|爱心用户捐赠</span>
+                <span class="record-amount">+¥500</span>
+              </div>
+
+              <div class="record-amount-green">¥1200</div>
+            </div>
+
+            <div class="record-divider-2">
+              <div class="cat-head-icon-2"></div>
+              <div class="fund-record-2">
+                <span>2026-04-28|采购冬季猫粮</span>
+                <span class="record-amount-red">-¥1200</span>
+              </div>
+              <div class="import-amount">¥1500</div>
+            </div>
+            <div class="record-divider-3">
+              <div class="cat-head-icon-3"></div>
+              <div class="fund-record-3">
+                <span>2026-04-25|医疗费用支出</span>
+                <span class="record-amount-red">-¥850</span>
+              </div>
+              <div class="expense-amount-850">¥850</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="guest-auth.js"></script>
+    <script>
+      document.getElementById("backBtn").addEventListener("click", function () {
+        window.location.href = "donate.html";
+      });
+    </script>
+  </body>
+</html>

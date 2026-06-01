@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>救助故事</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="header-global">
+        <div class="header-bg"></div>
+        <div class="header-function-bar">
+          <div class="paw-icon"></div>
+          <div class="search-box">
+            搜索宠物品种/名字...
+            <span class="search-icon"></span>
+          </div>
+          <a href="index.html" class="header-link">首页</a>
+          <div class="login-register-icon-group">
+            <div class="login-register-btn"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-page">
+        <div class="page-title">救助故事</div>
+        <div class="page-content">
+          <p>这里是救助故事页面内容</p>
+        </div>
+      </div>
+    </div>
+    <script src="guest-auth.js"></script>
+    <script>
+      document.querySelector('.login-register-btn').addEventListener('click', () => {
+        window.location.href = 'login.html';
+      });
+    </script>
+  </body>
+</html>

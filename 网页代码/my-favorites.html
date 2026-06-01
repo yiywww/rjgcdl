@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的收藏</title>
+  <link rel="stylesheet" href="profile.css">
+  <style>
+    .page-title {
+      font-size: 32px;
+      text-align: center;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .content-container {
+      padding: 20px;
+      max-height: 700px;
+      overflow-y: auto;
+    }
+    .favorite-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    .favorite-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .favorite-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    .pet-image {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      background: #f5f5f5;
+    }
+    .pet-info {
+      padding: 12px;
+    }
+    .pet-name {
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+    .pet-type {
+      font-size: 13px;
+      color: #999;
+    }
+    .remove-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 28px;
+      height: 28px;
+      background: rgba(255,255,255,0.9);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    .remove-btn:hover {
+      background: #ff6b6b;
+      color: #fff;
+    }
+    .favorite-card {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+    <header class="profile-header">
+      <div class="header-content">
+        <a href="profile.html" class="back-btn">
+          <img src="../个人中心image/猫爪返回按钮.png" alt="返回" class="paw-back-icon" />
+        </a>
+        <h1 class="profile-title">我的收藏</h1>
+        <img src="../个人中心image/左上角小人.png" alt="用户图标" class="user-icon" />
+      </div>
+    </header>
+    
+    <div class="content-container">
+      <div class="favorite-grid">
+        <div class="favorite-card">
+          <button class="remove-btn">×</button>
+          <img src="../宠物列表image/奶糖.png" alt="奶糖" class="pet-image" />
+          <div class="pet-info">
+            <h3 class="pet-name">奶糖</h3>
+            <p class="pet-type">布偶猫</p>
+          </div>
+        </div>
+        
+        <div class="favorite-card">
+          <button class="remove-btn">×</button>
+          <img src="../宠物列表image/奶糖.png" alt="雪球" class="pet-image" />
+          <div class="pet-info">
+            <h3 class="pet-name">雪球</h3>
+            <p class="pet-type">英国短毛猫</p>
+          </div>
+        </div>
+        
+        <div class="favorite-card">
+          <button class="remove-btn">×</button>
+          <img src="../宠物列表image/奶糖.png" alt="布丁" class="pet-image" />
+          <div class="pet-info">
+            <h3 class="pet-name">布丁</h3>
+            <p class="pet-type">金毛犬</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="guest-auth.js"></script>
+  <script>
+    document.querySelectorAll('.remove-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.closest('.favorite-card').remove();
+      });
+    });
+  </script>
+</body>
+</html>

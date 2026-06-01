@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人中心</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="page-container">
+    <!-- 头部区域 -->
+    <header class="profile-header">
+      <div class="header-content">
+        <a href="index.html" class="back-btn">
+          <img src="../个人中心image/猫爪返回按钮.png" alt="返回" class="paw-back-icon" />
+        </a>
+        <h1 class="profile-title">个人中心</h1>
+        <img src="../个人中心image/左上角小人.png" alt="用户图标" class="user-icon" />
+      </div>
+    </header>
+
+    <!-- 用户信息盒子 -->
+    <a href="user-info.html" class="user-info-box" id="userInfoBox"></a>
+
+    <!-- 我的领养词条 -->
+    <a href="my-adoptions.html" class="adopt-item" id="adoptItem"></a>
+
+    <!-- 我的收藏词条 -->
+    <a href="my-favorites.html" class="favorite-item" id="favoriteItem"></a>
+
+    <!-- 我的捐赠词条 -->
+    <a href="donate.html" class="donate-item" id="donateItem"></a>
+
+    <!-- 设置与帮助词条 -->
+    <a href="settings.html" class="settings-item" id="settingsItem"></a>
+  </div>
+  <script src="guest-auth.js"></script>
+  <script>
+    // 为所有可点击项添加点击反馈
+    document.querySelectorAll('.user-info-box, .adopt-item, .favorite-item, .donate-item, .settings-item').forEach(item => {
+      item.addEventListener('click', function(e) {
+        // 点击效果已经通过 CSS :active 实现
+      });
+      
+      // 添加键盘支持
+      item.setAttribute('tabindex', '0');
+      item.setAttribute('role', 'link');
+      
+      item.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

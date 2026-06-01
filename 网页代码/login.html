@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登录</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="login-page">
+      <div class="login-box">
+        <div class="form-tabs">
+          <button class="tab-btn active" data-tab="login">登录</button>
+          <button class="tab-btn" data-tab="register">注册</button>
+        </div>
+
+        <form id="loginForm" class="auth-form active">
+          <div class="input-item">
+            <input type="text" id="loginUsername" placeholder="账号" required />
+          </div>
+          <div class="input-item">
+            <input type="password" id="loginPassword" placeholder="密码" required />
+          </div>
+          <div class="error-msg" id="loginError"></div>
+          <button type="submit" class="login-btn">登录</button>
+          <button type="button" class="guest-btn" id="guestBtn">游客</button>
+        </form>
+
+        <form id="registerForm" class="auth-form">
+          <div class="input-item">
+            <input type="text" id="registerUsername" placeholder="账号（3-20个字符）" required />
+          </div>
+          <div class="input-item">
+            <input type="password" id="registerPassword" placeholder="密码（6-32个字符）" required />
+          </div>
+          <div class="input-item">
+            <input type="password" id="confirmPassword" placeholder="确认密码" required />
+          </div>
+          <div class="error-msg" id="registerError"></div>
+          <button type="submit" class="login-btn">注册</button>
+        </form>
+
+        <div class="success-overlay" id="successOverlay">
+          <div class="success-message">已存储密码</div>
+        </div>
+
+        <div class="admin-link-wrapper">
+          <a href="#" class="admin-link" id="adminLink">
+            <strong>管理员登录</strong>
+          </a>
+        </div>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

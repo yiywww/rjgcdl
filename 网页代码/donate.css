@@ -1,0 +1,985 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  font-family: "FZHei-B01", "方正黑体", "Microsoft YaHei", sans-serif;
+  overflow: hidden;
+}
+
+/* .page-container {
+  width: 1920px;
+  height: 1080px;
+  min-height: unset;
+  background-image: url("../image/首页/首页背景图.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+} */
+.page-container {
+  /* 基础定位 */
+  margin: 0 auto;
+  overflow: hidden;
+
+  /* ↓↓↓ 关键代码：强制保持 2279:1280 比例 ↓↓↓ */
+  width: 100vw;
+  height: calc(100vw / (2279 / 1280));
+  max-height: 100vh;
+  max-width: calc(100vh * (2279 / 1280));
+
+  /* ↓↓↓ 让容器在屏幕正中央 ↓↓↓ */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  /* 你原来的背景、样式保留 */
+  background-image: url("../爱心捐赠image/背景图.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.donate-header {
+  width: 100%;
+  height: 12%;
+  background-image: url("../爱心捐赠image/导航栏背景图.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.back-btn {
+  margin-top: 4px;
+  margin-left: 10px;
+  width: 7%;
+  height: 85%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.paw-back-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.donate-title {
+  width: 15%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.donate-icon {
+  width: 6%;
+  height: 100%;
+  margin-top: 10px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+.project-box {
+  display: flex;
+  margin-top: 4%;
+  width: 32%;
+  height: 80%;
+  position: absolute;
+  background-image: url(../爱心捐赠image/捐款项目背景图.png);
+  background-size: 100%;
+  background-position: center;
+  flex-direction: column;
+}
+.cat-container-1 {
+  width: 76%;
+  height: 23%;
+  background-image: url(../爱心捐赠image/急需救助.png);
+  position: absolute;
+  background-size: 100%;
+  top: 8%;
+  left: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+.cat-container-2 {
+  width: 76%;
+  height: 23%;
+  background-image: url(../爱心捐赠image/长期支持.jpg);
+  position: absolute;
+  background-size: 100%;
+  top: 34%;
+  left: 21%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.cat-content-1 {
+  display: flex;
+  flex-direction: column;
+
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 54%;
+  height: 79%;
+}
+.cat-content-2 {
+  display: flex;
+  flex-direction: column;
+
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: 54%;
+  height: 79%;
+}
+.cat-left-1 {
+  display: flex;
+  flex-shrink: 0;
+  width: 33%;
+  height: 85%;
+  margin-left: 5%;
+}
+
+.cat-left-2 {
+  display: flex;
+  flex-shrink: 0;
+  width: 33%;
+  height: 85%;
+  margin-left: 5%;
+}
+.cat-img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.white-cat-img {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.cat-text {
+  width: 100%;
+  height: 100%;
+  margin-top: 8%;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.cat-content-1 .cat-text p {
+  margin: 0px 0;
+  font-size: clamp(10px, 1vw, 18px);
+  font-family: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  font-weight: 700;
+  color: #5a3e2b;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.btn-container-1 {
+  display: flex;
+  width: 100%;
+}
+
+.plan-text {
+  width: 100%;
+  height: 100%;
+  margin-top: 8%;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.plan-text p {
+  margin: 0px 0;
+  font-size: clamp(10px, 1vw, 18px);
+  font-family: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  font-weight: 700;
+  color: #5a3e2b;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.btn-container-2 {
+  display: flex;
+  width: 100%;
+}
+
+.donate-btn-img {
+  width: 82%;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  display: block;
+}
+
+.donate-btn-img-second {
+  width: 82%;
+  height: auto;
+  object-fit: contain;
+  cursor: pointer;
+  display: block;
+}
+
+.urgent-help-img {
+  position: absolute;
+  left: 118px;
+  top: calc(50% - 170px);
+  transform: translateY(-50%);
+  width: 25vw;
+  height: 25vh;
+  object-fit: contain;
+  z-index: 20;
+}
+
+.long-support-img {
+  position: absolute;
+  left: 118px;
+  top: calc(50% - 170px + 18vh + 30px);
+  transform: translateY(-50%);
+  width: 25vw;
+  height: 25vh;
+  object-fit: contain;
+  z-index: 20;
+}
+.middle-content {
+  display: flex;
+  position: absolute;
+  width: 32%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  gap: 1%;
+}
+.photo-with-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.group-photo-img {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+}
+.fund-record-container {
+  background-image: url(../爱心捐赠image/善款去向透明背景图.png);
+  background-size: 100%;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 7%;
+}
+.first {
+  display: flex;
+  width: 94%;
+  height: 20%;
+  margin-top: 10%;
+}
+.sceond {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  height: 29%;
+}
+.sceond-left {
+  display: flex;
+  width: 35%;
+  height: 100%;
+}
+.sceond-right {
+  display: flex;
+  width: 65%;
+  height: 100%;
+  flex-direction: column;
+}
+.photo-caption {
+  font-family: "ZCOOL KuaiLe", "站酷快乐体", sans-serif;
+  /* font-size: clamp(20px, 2.8vw, 32px); */
+  font-size: 3vw;
+  color: #55aae6;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 4px;
+  transform: rotate(-1.5deg);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.transparency-img {
+  width: 100%;
+  display: flex;
+  z-index: 1;
+  height: 100%;
+}
+
+.transparency-kids-overlay {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.white-cat-layer {
+  margin-left: 14%;
+  height: 90%;
+  width: 77%;
+}
+
+.flow-record-img {
+  background-image: url(../爱心捐赠image/查看流水.png);
+  display: flex;
+  background-size: 100%;
+  width: 75%;
+  height: 35%;
+}
+
+.fund-record-text {
+  margin: 0px 0;
+  font-size: clamp(10px, 1vw, 60px);
+  font-family: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  font-weight: 700;
+  color: #5a3e2b;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+  height: 65%;
+}
+
+.confirm-donate-btn {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  height: 100%;
+  background-image: url(../爱心捐赠image/确认捐款按钮.png);
+  background-size: 100%;
+}
+
+.custom-amount-input {
+  display: flex;
+  width: 100%;
+  margin: 0% 0% 0% 0%;
+  height: 100%;
+  left: 0%;
+  background-image: url(../爱心捐赠image/输入其它金额.png);
+  background-size: 100%;
+}
+
+.amount-bg-1a {
+  position: absolute;
+  display: block;
+  width: 58px;
+  height: 34px;
+  z-index: 26;
+  top: 261px;
+  left: 90px;
+  transform: translate(500px, 300px);
+}
+
+.amount-bg-1b {
+  position: absolute;
+  display: block;
+  width: 58px;
+  height: 34px;
+  z-index: 26;
+  top: 261px;
+  left: 175px;
+  transform: translate(560px, 300px);
+}
+
+.amount-bg-2a {
+  position: absolute;
+  display: block;
+  width: 58px;
+  height: 34px;
+  z-index: 26;
+  top: 261px;
+  left: 100px;
+  transform: translate(560px, 300px);
+}
+
+.amount-bg-2b {
+  position: absolute;
+  display: block;
+  width: 58px;
+  height: 34px;
+  z-index: 26;
+  top: 261px;
+  left: 250px;
+  transform: translate(560px, 300px);
+}
+
+.amount-box {
+  position: absolute;
+  display: flex;
+  width: 70%;
+  height: 13%;
+  top: 21%;
+  left: 9%;
+  gap: 5%;
+  font-size: clamp(12px, 1.5vw, 60px);
+  font-family: "Noto Sans SC", "Source Han Sans SC", sans-serif;
+  font-weight: 700;
+  color: #5a3e2b;
+  color: #5a3e2b;
+  text-align: center;
+}
+.amount-5,
+.amount-10,
+.amount-15,
+.amount-50 {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  /* 可选：微调上下/左右位置，比如向上移2px */
+  /* transform: translateY(-2px); */
+}
+.amount-5 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url(../爱心捐赠image/金额背景图1.png);
+  background-size: 100%;
+}
+
+.amount-10 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url(../爱心捐赠image/金额背景图2.png);
+  background-size: 100%;
+}
+
+.amount-15 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url(../爱心捐赠image/金额背景图1.png);
+  background-size: 100%;
+}
+
+.amount-50 {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-image: url(../爱心捐赠image/金额背景图2.png);
+  background-size: 100%;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .project-box {
+    left: 2vw;
+    top: calc(90px + 4vh);
+    width: calc((100vw - 6vw) / 3);
+    height: calc(100vh - 90px - 8vh);
+    margin: 0 1vw 4vh 0;
+  }
+
+  .cat-container {
+    left: 80px;
+    top: calc(50% - 160px);
+    gap: 0px;
+    flex-direction: row;
+  }
+
+  .cat-img {
+    width: 11vw;
+    height: 11vh;
+  }
+
+  .cat-content {
+    margin-left: -25px;
+    margin-top: 145px;
+  }
+
+  .cat-text {
+    margin-top: 25px;
+    margin-bottom: 8px;
+  }
+
+  .cat-text p {
+    font-size: clamp(9px, 1.4vw, 13px);
+    margin: 3px 0;
+  }
+
+  .btn-container-1 {
+    margin-top: 26px;
+    margin-bottom: -5px;
+  }
+
+  .plan-text {
+    margin: 12px 0;
+  }
+
+  .plan-text p {
+    margin: 4px 0;
+    font-size: clamp(9px, 1.4vw, 13px);
+  }
+
+  .btn-container-2 {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .donate-btn-img {
+    width: clamp(70px, 9vw, 120px);
+    display: block;
+  }
+
+  .donate-btn-img-second {
+    width: clamp(70px, 9vw, 120px);
+    display: block;
+  }
+
+  .white-cat-img {
+    left: 70px;
+    top: calc(50% - 160px + 13vh + 60px);
+    width: 11vw;
+    height: 11vh;
+    z-index: 100;
+  }
+
+  .urgent-help-img {
+    left: 108px;
+    top: calc(50% - 160px);
+    width: 25vw;
+    height: 25vh;
+  }
+
+  .long-support-img {
+    left: 108px;
+    top: calc(50% - 160px + 18vh + 30px);
+    width: 25vw;
+    height: 25vh;
+  }
+
+  .photo-with-text {
+    left: calc(33vw + 20px);
+    top: 40px;
+    width: 45vw;
+  }
+
+  .photo-caption {
+    margin-top: 10px;
+    font-family: "STKaiti", "KaiTi", "华文行楷", "FangSong", cursive;
+    font-size: clamp(18px, 2.5vw, 28px);
+    color: #0000ff;
+    font-weight: normal;
+    letter-spacing: 3px;
+    transform: rotate(-1.5deg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .transparency-img {
+    margin-top: 15px;
+    width: calc(180% + 370px);
+    margin-left: calc(-40% - 125px);
+    max-height: calc(70vh - 300px);
+    transform: translateX(175px);
+  }
+
+  .transparency-kids-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-top: 20px;
+    margin-left: calc(-45% + 445px);
+    height: 100px;
+    width: 100px;
+    max-height: calc(-300px + 80vh);
+    object-fit: contain;
+    transform: translate(-75px, 400px);
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .white-cat-layer {
+    margin-top: 15px;
+    height: 180px;
+    width: 450px;
+    transform: translate(-145px, 470px);
+  }
+}
+
+@media (max-width: 480px) {
+  .donate-header {
+    height: 80px;
+    padding: 15px 15px 0;
+  }
+
+  .paw-back-icon,
+  .donate-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .project-box {
+    left: 3vw;
+    top: calc(80px + 5vh);
+    width: calc((100vw - 8vw) / 3);
+    height: calc(100vh - 80px - 10vh);
+    margin: 0 1.5vw 5vh 0;
+  }
+
+  .cat-container {
+    left: 75px;
+    top: calc(50% - 155px);
+    gap: 0px;
+    flex-direction: row;
+  }
+
+  .cat-img {
+    width: 14vw;
+    height: 14vh;
+  }
+
+  .cat-content {
+    margin-left: -20px;
+    margin-top: 140px;
+  }
+
+  .cat-text {
+    margin-top: 22px;
+    margin-bottom: 6px;
+  }
+
+  .cat-text p {
+    font-size: clamp(8px, 2vw, 12px);
+    margin: 2px 0;
+  }
+
+  .btn-container-1 {
+    margin-top: 25px;
+    margin-bottom: -8px;
+  }
+
+  .plan-text {
+    margin: 10px 0;
+  }
+
+  .plan-text p {
+    margin: 3px 0;
+    font-size: clamp(8px, 2vw, 12px);
+  }
+
+  .btn-container-2 {
+    display: block;
+    margin-top: 10px;
+  }
+
+  .donate-btn-img {
+    width: clamp(60px, 11vw, 100px);
+    display: block;
+  }
+
+  .donate-btn-img-second {
+    width: clamp(60px, 11vw, 100px);
+    display: block;
+  }
+
+  .white-cat-img {
+    left: 65px;
+    top: calc(50% - 155px + 16vh + 60px);
+    width: 14vw;
+    height: 14vh;
+    z-index: 100;
+  }
+
+  .urgent-help-img {
+    left: 98px;
+    top: calc(50% - 155px);
+    width: 28vw;
+    height: 28vh;
+  }
+
+  .long-support-img {
+    left: 98px;
+    top: calc(50% - 155px + 20vh + 30px);
+    width: 28vw;
+    height: 28vh;
+  }
+
+  .photo-with-text {
+    left: calc(33vw + 10px);
+    top: 50px;
+    width: 50vw;
+  }
+
+  .photo-caption {
+    margin-top: 8px;
+    font-family: "STKaiti", "KaiTi", "华文行楷", "FangSong", cursive;
+    font-size: clamp(16px, 3vw, 24px);
+    color: #0000ff;
+    font-weight: normal;
+    letter-spacing: 2px;
+    transform: rotate(-1.5deg);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .transparency-img {
+    margin-top: 10px;
+    width: calc(170% + 350px);
+    margin-left: calc(-35% - 115px);
+    max-height: calc(60vh - 300px);
+    transform: translateX(175px);
+  }
+
+  .transparency-kids-overlay {
+    margin-top: 10px;
+    width: calc(170% - 870px);
+    margin-left: calc(-35% + 495px);
+    max-height: calc(60vh - 300px);
+    transform: translate(-75px, 400px);
+  }
+
+  .white-cat-layer {
+    margin-top: 10px;
+    height: 160px;
+    width: 400px;
+    transform: translate(-145px, 470px);
+  }
+}
+
+/* 橘猫捐款弹窗样式 */
+.donate-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.donate-modal {
+  position: relative;
+  width: auto;
+  max-width: 600px;
+  max-height: 90vh;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: donateModalFadeIn 0.3s ease-out;
+}
+
+@keyframes donateModalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.donate-modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 50%;
+  background-image: url("../小橘募捐界面/按钮.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: transparent;
+  font-size: 0;
+  cursor: pointer;
+  z-index: 2010;
+  transition: all 0.3s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.donate-modal-close-btn:hover {
+  transform: rotate(90deg);
+}
+
+.donate-modal-content {
+  position: relative;
+  width: 550px;
+  min-height: 350px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.donate-modal-bg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.donate-modal-title {
+  position: absolute;
+  top: 21px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "FZHei-B01", "方正黑体", "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  z-index: 2015;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
+}
+
+.donate-modal-cat {
+  position: absolute;
+  top: 60px;
+  left: 17%;
+  transform: translateX(-50%);
+  width: 136px;
+  height: auto;
+  z-index: 2014;
+}
+
+.donate-modal-info {
+  position: absolute;
+  top: 77px;
+  left: 32%;
+  z-index: 2014;
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8;
+}
+
+.donate-modal-info p {
+  margin: 0px 0;
+  font-weight: 500;
+  text-shadow: 4px 1px 2px rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #ccc;
+}
+
+.donate-modal-amount {
+  position: absolute;
+  top: 150px;
+  left: 6%;
+  z-index: 2014;
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: 18px;
+  color: #333;
+}
+
+.donate-modal-amount p {
+  margin: -1px 0;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+  /* top: 100px; */
+  margin-top: 71px;
+}
+
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 3px;
+  margin-bottom: 13px;
+}
+
+.progress-bar-bg {
+  width: 450px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b6b, #ff8e53);
+  border-radius: 8px;
+  transition: width 0.5s ease;
+}
+
+.progress-percent {
+  font-weight: bold;
+  font-size: 16px;
+  color: #e74c3c;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+.donate-modal-donor {
+  position: relative;
+  margin-top: -3px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.95);
+  z-index: 2015;
+  line-height: 1.8;
+}
+
+.donate-amount-container {
+  position: absolute;
+  display: flex;
+  width: 33%;
+  height: 43.5%;
+  top: 50%;
+  right: 0%;
+  background-image: url(../爱心捐赠image/我想捐一点心意.png);
+  background-size: 100%;
+}
+
+.neirong {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  gap: 5%;
+}
+.serch {
+  position: absolute;
+  display: flex;
+  width: 75%;
+  height: 20%;
+  top: 43%;
+  left: 7%;
+}
+.queren {
+  position: absolute;
+  display: flex;
+  width: 76%;
+  height: 31%;
+  top: 64%;
+  left: 6%;
+}
